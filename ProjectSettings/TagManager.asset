@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Hierba
+  - Madera
+  - Enemigo
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Floor
+  - Wall
+  - Grapple
+  - Enemigos
+  - VFX
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Cielo
+    uniqueID: 4287625121
+    locked: 0
+  - name: Nubes
+    uniqueID: 654928517
+    locked: 0
+  - name: "Monta\xF1a lejana"
+    uniqueID: 1349730479
+    locked: 0
+  - name: "Monta\xF1a cerca"
+    uniqueID: 3275599483
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Efectos
+    uniqueID: 2012023623
+    locked: 0
+  m_RenderingLayers:
+  - Default

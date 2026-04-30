@@ -1,0 +1,638 @@
+fileFormatVersion: 2
+guid: c2b46570a71f4aa46976dcc9fe121470
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2274578529022658433
+    second: EI_01_Volar_1-sheet_0
+  - first:
+      213: 5991896539206534306
+    second: EI_01_Volar_1-sheet_1
+  - first:
+      213: 7280688280700501846
+    second: EI_01_Volar_1-sheet_2
+  - first:
+      213: -3027400414569888525
+    second: EI_01_Volar_1-sheet_3
+  - first:
+      213: 5244184248296334185
+    second: EI_01_Volar_1-sheet_4
+  - first:
+      213: -418044349831607420
+    second: EI_01_Volar_1-sheet_5
+  - first:
+      213: -7529847904966471026
+    second: EI_01_Volar_1-sheet_6
+  - first:
+      213: 615611932318548615
+    second: EI_01_Volar_1-sheet_7
+  - first:
+      213: -1039772403405253528
+    second: EI_01_Volar_1-sheet_8
+  - first:
+      213: -4073044940702041374
+    second: EI_01_Volar_1-sheet_9
+  - first:
+      213: 2741863941376061660
+    second: EI_01_Volar_1-sheet_10
+  - first:
+      213: -5939501762976097374
+    second: EI_01_Volar_1-sheet_11
+  - first:
+      213: 2896926871276723348
+    second: EI_01_Volar_1-sheet_12
+  - first:
+      213: -7477240212457083785
+    second: EI_01_Volar_1-sheet_13
+  - first:
+      213: -764453751274539851
+    second: EI_01_Volar_1-sheet_14
+  - first:
+      213: -8997362678014527250
+    second: EI_01_Volar_1-sheet_15
+  - first:
+      213: 5311227791950586759
+    second: EI_01_Volar_1-sheet_16
+  - first:
+      213: -9173054379160930195
+    second: EI_01_Volar_1-sheet_17
+  - first:
+      213: -8693979343909643166
+    second: EI_01_Volar_1-sheet_18
+  - first:
+      213: 5040322530080133914
+    second: EI_01_Volar_1-sheet_19
+  - first:
+      213: -6112483506619561630
+    second: EI_01_Volar_1-sheet_20
+  - first:
+      213: 2484152265242801575
+    second: EI_01_Volar_1-sheet_21
+  - first:
+      213: 1854691445937937464
+    second: EI_01_Volar_1-sheet_22
+  - first:
+      213: 6053499673224493472
+    second: EI_01_Volar_1-sheet_23
+  - first:
+      213: -6024006748619791365
+    second: EI_01_Volar_1-sheet_24
+  - first:
+      213: -933489786526325110
+    second: EI_01_Volar_1-sheet_25
+  - first:
+      213: 581156455534311704
+    second: EI_01_Volar_1-sheet_26
+  - first:
+      213: -4259056933087824730
+    second: EI_01_Volar_1-sheet_27
+  - first:
+      213: -5725301222965603349
+    second: EI_01_Volar_1-sheet_28
+  - first:
+      213: 7105834431567991713
+    second: EI_01_Volar_1-sheet_29
+  - first:
+      213: -1982205305944842675
+    second: EI_01_Volar_1-sheet_30
+  - first:
+      213: -2849915029641558469
+    second: EI_01_Volar_1-sheet_31
+  - first:
+      213: -6524454337806079581
+    second: EI_01_Volar_1-sheet_32
+  - first:
+      213: 8581641932874333116
+    second: EI_01_Volar_1-sheet_33
+  - first:
+      213: -1929527438527562404
+    second: EI_01_Volar_1-sheet_34
+  - first:
+      213: 1957960324320831026
+    second: EI_01_Volar_1-sheet_35
+  - first:
+      213: -8573020668313171756
+    second: EI_01_Volar_1-sheet_36
+  - first:
+      213: 4849072624363591064
+    second: EI_01_Volar_1-sheet_37
+  - first:
+      213: -5805264821186078850
+    second: EI_01_Volar_1-sheet_38
+  - first:
+      213: 5949855378213358478
+    second: EI_01_Volar_1-sheet_39
+  - first:
+      213: 8635388007118596171
+    second: EI_01_Volar_1-sheet_40
+  - first:
+      213: 4693769011793704274
+    second: EI_01_Volar_1-sheet_41
+  - first:
+      213: 8847924753480996150
+    second: EI_01_Volar_1-sheet_42
+  - first:
+      213: 7134265649873479
+    second: EI_01_Volar_1-sheet_43
+  - first:
+      213: 2872162710714663571
+    second: EI_01_Volar_1-sheet_44
+  - first:
+      213: -3134043683535248645
+    second: EI_01_Volar_1-sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78bfdb01e21f60e0800000000000000
+      internalID: -2274578529022658433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a44c4ee72e772350800000000000000
+      internalID: 5991896539206534306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fb083aa633a0560800000000000000
+      internalID: 7280688280700501846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f401b0ec538cf5d0800000000000000
+      internalID: -3027400414569888525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963e668f9c517c840800000000000000
+      internalID: 5244184248296334185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b8de3f0eec23af0800000000000000
+      internalID: -418044349831607420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8211cba93b908790800000000000000
+      internalID: -7529847904966471026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782c6517ac71b8800800000000000000
+      internalID: 615611932318548615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86496cf028cf191f0800000000000000
+      internalID: -1039772403405253528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eab043d433a977c0800000000000000
+      internalID: -4073044940702041374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd03c284abe0d0620800000000000000
+      internalID: 2741863941376061660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abd00b8d96a29da0800000000000000
+      internalID: -5939501762976097374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c9bbe04a3f33820800000000000000
+      internalID: 2896926871276723348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77caa3494a18b3890800000000000000
+      internalID: -7477240212457083785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4f01c0d5d1465f0800000000000000
+      internalID: -764453751274539851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EI_01_Volar_1-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8369d7052f22380800000000000000
+      internalID: -8997362678014527250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8ad47d0937a2bef45a8f970142e1b425
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      EI_01_Volar_1-sheet_0: -2274578529022658433
+      EI_01_Volar_1-sheet_1: 5991896539206534306
+      EI_01_Volar_1-sheet_10: 2741863941376061660
+      EI_01_Volar_1-sheet_11: -5939501762976097374
+      EI_01_Volar_1-sheet_12: 2896926871276723348
+      EI_01_Volar_1-sheet_13: -7477240212457083785
+      EI_01_Volar_1-sheet_14: -764453751274539851
+      EI_01_Volar_1-sheet_15: -8997362678014527250
+      EI_01_Volar_1-sheet_2: 7280688280700501846
+      EI_01_Volar_1-sheet_3: -3027400414569888525
+      EI_01_Volar_1-sheet_4: 5244184248296334185
+      EI_01_Volar_1-sheet_5: -418044349831607420
+      EI_01_Volar_1-sheet_6: -7529847904966471026
+      EI_01_Volar_1-sheet_7: 615611932318548615
+      EI_01_Volar_1-sheet_8: -1039772403405253528
+      EI_01_Volar_1-sheet_9: -4073044940702041374
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

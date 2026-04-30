@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 03703e99212e8ce41a3c2d2851f9abe0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6027642223778971991
+    second: Pintura-Roja_0
+  - first:
+      213: -4158645856077778790
+    second: Pintura-Roja_1
+  - first:
+      213: 515938215664554121
+    second: Pintura-Roja_2
+  - first:
+      213: 3440547693663356252
+    second: Pintura-Roja_3
+  - first:
+      213: -198628849973547829
+    second: Pintura-Roja_4
+  - first:
+      213: 5181178647475264083
+    second: Pintura-Roja_5
+  - first:
+      213: -1203480031920950932
+    second: Pintura-Roja_6
+  - first:
+      213: -8708299181026829256
+    second: Pintura-Roja_7
+  - first:
+      213: -6950638768434506262
+    second: Pintura-Roja_8
+  - first:
+      213: 1914842133705449276
+    second: Pintura-Roja_9
+  - first:
+      213: 356903578155689804
+    second: Pintura-Roja_10
+  - first:
+      213: -8919940994990229811
+    second: Pintura-Roja_11
+  - first:
+      213: 8090678339056670432
+    second: Pintura-Roja_12
+  - first:
+      213: 722293106332853932
+    second: Pintura-Roja_13
+  - first:
+      213: -3881642287594893673
+    second: Pintura-Roja_14
+  - first:
+      213: -8521206367006262630
+    second: Pintura-Roja_15
+  - first:
+      213: 7843015237286418893
+    second: Pintura-Roja_16
+  - first:
+      213: -9208319178385412988
+    second: Pintura-Roja_17
+  - first:
+      213: 7307061150958945934
+    second: Pintura-Roja_18
+  - first:
+      213: 922130559755434325
+    second: Pintura-Roja_19
+  - first:
+      213: -6124023710671928613
+    second: Pintura-Roja_20
+  - first:
+      213: -4280360867190438233
+    second: Pintura-Roja_21
+  - first:
+      213: 1563184906927526417
+    second: Pintura-Roja_22
+  - first:
+      213: 666267449459813825
+    second: Pintura-Roja_23
+  - first:
+      213: -5285825062367686786
+    second: Pintura-Roja_24
+  - first:
+      213: 7357400980232625829
+    second: Pintura-Roja_25
+  - first:
+      213: 3586070743938446820
+    second: Pintura-Roja_26
+  - first:
+      213: -9133929759487829165
+    second: Pintura-Roja_27
+  - first:
+      213: -7852277093636532576
+    second: Pintura-Roja_28
+  - first:
+      213: 4059689413385678311
+    second: Pintura-Roja_29
+  - first:
+      213: -3102017244049496615
+    second: Pintura-Roja_30
+  - first:
+      213: 6176640574483604790
+    second: Pintura-Roja_31
+  - first:
+      213: -8962046382618735717
+    second: Pintura-Roja_32
+  - first:
+      213: -7146395138936303425
+    second: Pintura-Roja_33
+  - first:
+      213: -8423577200547513110
+    second: Pintura-Roja_34
+  - first:
+      213: 4039618067956827891
+    second: Pintura-Roja_35
+  - first:
+      213: -1277900049322781122
+    second: Pintura-Roja_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pintura-Roja_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 48
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae32825553895ca0800000000000000
+      internalID: -6027642223778971991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 27
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9075d990a58946c0800000000000000
+      internalID: -4158645856077778790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 48
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9801cb6d21bf82700800000000000000
+      internalID: 515938215664554121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 26
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55089906e74fbf20800000000000000
+      internalID: 3440547693663356252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 45
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccae230d145e3df0800000000000000
+      internalID: -198628849973547829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 47
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a1a90678e37e740800000000000000
+      internalID: 5181178647475264083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 23
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61731b89416c4fe0800000000000000
+      internalID: -1203480031920950932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 44
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c121d8808e52780800000000000000
+      internalID: -8708299181026829256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_8
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 44
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5176dbdde5a8f90800000000000000
+      internalID: -6950638768434506262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 41
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fd67c76c2e29a10800000000000000
+      internalID: 1914842133705449276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_10
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 38
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c472903d9e9f3f400800000000000000
+      internalID: 356903578155689804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_11
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 24
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6b928cce0063480800000000000000
+      internalID: -8919940994990229811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_12
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 21
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e69b67451dd74070800000000000000
+      internalID: 8090678339056670432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_13
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 25
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6eeaad0c9160a00800000000000000
+      internalID: 722293106332853932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_14
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 47
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e85ceb7e2a12ac0800000000000000
+      internalID: -3881642287594893673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_15
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 26
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a7bccd4f79eb980800000000000000
+      internalID: -8521206367006262630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_16
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 19
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9de62edccf7dc60800000000000000
+      internalID: 7843015237286418893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_17
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 16
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cabe9be7a753080800000000000000
+      internalID: -9208319178385412988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_18
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 35
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8607fef665e76560800000000000000
+      internalID: 7307061150958945934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_19
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 10
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55931c2cbd01ccc00800000000000000
+      internalID: 922130559755434325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_20
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 13
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd28451b1e8130ba0800000000000000
+      internalID: -6124023710671928613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_21
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 13
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a681a8387a1994c0800000000000000
+      internalID: -4280360867190438233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_22
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 13
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112daa7046c81b510800000000000000
+      internalID: 1563184906927526417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_23
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 14
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd257a17be0f3900800000000000000
+      internalID: 666267449459813825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_24
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 15
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f87bc7c1af4a6b0800000000000000
+      internalID: -5285825062367686786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_25
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 17
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae50e8d53dba1660800000000000000
+      internalID: 7357400980232625829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_26
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 20
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e53fdf775844c130800000000000000
+      internalID: 3586070743938446820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_27
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 22
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bdb520743cd3180800000000000000
+      internalID: -9133929759487829165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_28
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a69bd3269b170390800000000000000
+      internalID: -7852277093636532576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_29
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed6447230ae65830800000000000000
+      internalID: 4059689413385678311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_30
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 7
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d52b4170cb63f4d0800000000000000
+      internalID: -3102017244049496615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_31
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6352c5390e5d7b550800000000000000
+      internalID: 6176640574483604790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_32
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 15
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b8f674c4a60a380800000000000000
+      internalID: -8962046382618735717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_33
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 3
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb09f1ffb77e2dc90800000000000000
+      internalID: -7146395138936303425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_34
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec39478a21791b80800000000000000
+      internalID: -8423577200547513110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_35
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f601d0ea3b9f0830800000000000000
+      internalID: 4039618067956827891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Roja_36
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 3
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3659adfcacf34ee0800000000000000
+      internalID: -1277900049322781122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pintura-Roja_0: -6027642223778971991
+      Pintura-Roja_1: -4158645856077778790
+      Pintura-Roja_10: 356903578155689804
+      Pintura-Roja_11: -8919940994990229811
+      Pintura-Roja_12: 8090678339056670432
+      Pintura-Roja_13: 722293106332853932
+      Pintura-Roja_14: -3881642287594893673
+      Pintura-Roja_15: -8521206367006262630
+      Pintura-Roja_16: 7843015237286418893
+      Pintura-Roja_17: -9208319178385412988
+      Pintura-Roja_18: 7307061150958945934
+      Pintura-Roja_19: 922130559755434325
+      Pintura-Roja_2: 515938215664554121
+      Pintura-Roja_20: -6124023710671928613
+      Pintura-Roja_21: -4280360867190438233
+      Pintura-Roja_22: 1563184906927526417
+      Pintura-Roja_23: 666267449459813825
+      Pintura-Roja_24: -5285825062367686786
+      Pintura-Roja_25: 7357400980232625829
+      Pintura-Roja_26: 3586070743938446820
+      Pintura-Roja_27: -9133929759487829165
+      Pintura-Roja_28: -7852277093636532576
+      Pintura-Roja_29: 4059689413385678311
+      Pintura-Roja_3: 3440547693663356252
+      Pintura-Roja_30: -3102017244049496615
+      Pintura-Roja_31: 6176640574483604790
+      Pintura-Roja_32: -8962046382618735717
+      Pintura-Roja_33: -7146395138936303425
+      Pintura-Roja_34: -8423577200547513110
+      Pintura-Roja_35: 4039618067956827891
+      Pintura-Roja_36: -1277900049322781122
+      Pintura-Roja_4: -198628849973547829
+      Pintura-Roja_5: 5181178647475264083
+      Pintura-Roja_6: -1203480031920950932
+      Pintura-Roja_7: -8708299181026829256
+      Pintura-Roja_8: -6950638768434506262
+      Pintura-Roja_9: 1914842133705449276
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

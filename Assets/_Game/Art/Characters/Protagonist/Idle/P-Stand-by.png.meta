@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: bed4f70ca35c1a64c85e7a45ad9e90d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5098576955225680714
+    second: P-Stand-by_0
+  - first:
+      213: -9076052083712908039
+    second: P-Stand-by_1
+  - first:
+      213: -7086227201953160072
+    second: P-Stand-by_2
+  - first:
+      213: -1614169643710213382
+    second: P-Stand-by_3
+  - first:
+      213: -6279653525905238633
+    second: P-Stand-by_4
+  - first:
+      213: -433395948060412951
+    second: P-Stand-by_5
+  - first:
+      213: -6649499472831243229
+    second: P-Stand-by_6
+  - first:
+      213: -262185768709564151
+    second: P-Stand-by_7
+  - first:
+      213: -3984140567086694055
+    second: P-Stand-by_8
+  - first:
+      213: -4782823708465563567
+    second: P-Stand-by_9
+  - first:
+      213: 2510687901170878740
+    second: P-Stand-by_10
+  - first:
+      213: 7100141342583342113
+    second: P-Stand-by_11
+  - first:
+      213: 7292617384264368126
+    second: P-Stand-by_12
+  - first:
+      213: 589569580905312604
+    second: P-Stand-by_13
+  - first:
+      213: -5525285381804402943
+    second: P-Stand-by_14
+  - first:
+      213: -6751083885325387830
+    second: P-Stand-by_15
+  - first:
+      213: 8788911116993513930
+    second: P-Stand-by_16
+  - first:
+      213: -5648547374419670707
+    second: P-Stand-by_17
+  - first:
+      213: -6253262487572566117
+    second: P-Stand-by_18
+  - first:
+      213: -7643671621445875325
+    second: P-Stand-by_19
+  - first:
+      213: -3749452331616571007
+    second: P-Stand-by_20
+  - first:
+      213: 7597144648568588663
+    second: P-Stand-by_21
+  - first:
+      213: 3491915308621638871
+    second: P-Stand-by_22
+  - first:
+      213: 7021944987127485196
+    second: P-Stand-by_23
+  - first:
+      213: 190799877577762373
+    second: P-Stand-by_24
+  - first:
+      213: 1036322867642482745
+    second: P-Stand-by_25
+  - first:
+      213: -603972294565392295
+    second: P-Stand-by_26
+  - first:
+      213: 1066571670032666066
+    second: P-Stand-by_27
+  - first:
+      213: 4710805377425024678
+    second: P-Stand-by_28
+  - first:
+      213: -5735410464902463648
+    second: P-Stand-by_29
+  - first:
+      213: -6331833642805772471
+    second: P-Stand-by_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P-Stand-by_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b28343ab8c1c640800000000000000
+      internalID: 5098576955225680714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4295387b26b0280800000000000000
+      internalID: -9076052083712908039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8742fdd77e9a8ad90800000000000000
+      internalID: -7086227201953160072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af21f63e2415999e0800000000000000
+      internalID: -1614169643710213382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79593e3a3603ad8a0800000000000000
+      internalID: -6279653525905238633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3f3c47ea44cf9f0800000000000000
+      internalID: -433395948060412951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c1fb3c57b38b3a0800000000000000
+      internalID: -6649499472831243229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90957e6be678c5cf0800000000000000
+      internalID: -262185768709564151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951039b534d75b8c0800000000000000
+      internalID: -3984140567086694055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158f7997d2fff9db0800000000000000
+      internalID: -4782823708465563567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_10
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419492b0851c7d220800000000000000
+      internalID: 2510687901170878740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_11
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124ceb3dee4c88260800000000000000
+      internalID: 7100141342583342113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_12
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff7aef7fd4943560800000000000000
+      internalID: 7292617384264368126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_13
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51bc3009629e2800800000000000000
+      internalID: 589569580905312604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_14
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107d3ee283e3253b0800000000000000
+      internalID: -5525285381804402943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7f05e99f45f42a0800000000000000
+      internalID: -6751083885325387830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_16
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac941e2681c78f970800000000000000
+      internalID: 8788911116993513930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_17
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4900ca17145c91b0800000000000000
+      internalID: -5648547374419670707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_18
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f26f416e2f739a0800000000000000
+      internalID: -6253262487572566117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_19
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3890cff78293ce590800000000000000
+      internalID: -7643671621445875325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_20
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181fbb748f447fbc0800000000000000
+      internalID: -3749452331616571007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_21
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779c0357eca7e6960800000000000000
+      internalID: 7597144648568588663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_22
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc2424e876c57030800000000000000
+      internalID: 3491915308621638871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_23
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03911e03c5f27160800000000000000
+      internalID: 7021944987127485196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_24
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546e53e4a7bd5a200800000000000000
+      internalID: 190799877577762373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_25
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930c17e4822c16e00800000000000000
+      internalID: 1036322867642482745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_26
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9509048e5624e97f0800000000000000
+      internalID: -603972294565392295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_27
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddcacf68493dce00800000000000000
+      internalID: 1066571670032666066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_28
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a62b672884206140800000000000000
+      internalID: 4710805377425024678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_29
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f3e66d19ab760b0800000000000000
+      internalID: -5735410464902463648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P-Stand-by_30
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 0
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fb1bf69dec028a0800000000000000
+      internalID: -6331833642805772471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P-Stand-by_0: 5098576955225680714
+      P-Stand-by_1: -9076052083712908039
+      P-Stand-by_10: 2510687901170878740
+      P-Stand-by_11: 7100141342583342113
+      P-Stand-by_12: 7292617384264368126
+      P-Stand-by_13: 589569580905312604
+      P-Stand-by_14: -5525285381804402943
+      P-Stand-by_15: -6751083885325387830
+      P-Stand-by_16: 8788911116993513930
+      P-Stand-by_17: -5648547374419670707
+      P-Stand-by_18: -6253262487572566117
+      P-Stand-by_19: -7643671621445875325
+      P-Stand-by_2: -7086227201953160072
+      P-Stand-by_20: -3749452331616571007
+      P-Stand-by_21: 7597144648568588663
+      P-Stand-by_22: 3491915308621638871
+      P-Stand-by_23: 7021944987127485196
+      P-Stand-by_24: 190799877577762373
+      P-Stand-by_25: 1036322867642482745
+      P-Stand-by_26: -603972294565392295
+      P-Stand-by_27: 1066571670032666066
+      P-Stand-by_28: 4710805377425024678
+      P-Stand-by_29: -5735410464902463648
+      P-Stand-by_3: -1614169643710213382
+      P-Stand-by_30: -6331833642805772471
+      P-Stand-by_4: -6279653525905238633
+      P-Stand-by_5: -433395948060412951
+      P-Stand-by_6: -6649499472831243229
+      P-Stand-by_7: -262185768709564151
+      P-Stand-by_8: -3984140567086694055
+      P-Stand-by_9: -4782823708465563567
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

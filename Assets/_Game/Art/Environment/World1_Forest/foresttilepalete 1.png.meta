@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: f98ac275ec59b0f4f93d292433ef9acf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7581226315277833071
+    second: foresttilepalete 1_0
+  - first:
+      213: -8892840957091976091
+    second: foresttilepalete 1_1
+  - first:
+      213: -5146217254645480492
+    second: foresttilepalete 1_2
+  - first:
+      213: 4393749879427357856
+    second: foresttilepalete 1_3
+  - first:
+      213: -8833958586596766148
+    second: foresttilepalete 1_4
+  - first:
+      213: 1636034405229320832
+    second: foresttilepalete 1_5
+  - first:
+      213: 2341157599051834950
+    second: foresttilepalete 1_6
+  - first:
+      213: 6596074778193885442
+    second: foresttilepalete 1_7
+  - first:
+      213: -3668294499657684476
+    second: foresttilepalete 1_8
+  - first:
+      213: 5683542938164210920
+    second: foresttilepalete 1_9
+  - first:
+      213: 51770847739605405
+    second: foresttilepalete 1_10
+  - first:
+      213: 976491849891469198
+    second: foresttilepalete 1_11
+  - first:
+      213: -171756756135746838
+    second: foresttilepalete 1_12
+  - first:
+      213: -654949449093921965
+    second: foresttilepalete 1_13
+  - first:
+      213: -4848705405963782759
+    second: foresttilepalete 1_14
+  - first:
+      213: -8603398686647770070
+    second: foresttilepalete 1_15
+  - first:
+      213: 584460940352092989
+    second: foresttilepalete 1_16
+  - first:
+      213: 5779901865204795643
+    second: foresttilepalete 1_17
+  - first:
+      213: 293479541519484177
+    second: foresttilepalete 1_18
+  - first:
+      213: 4894052002453914667
+    second: foresttilepalete 1_19
+  - first:
+      213: -8454178350875152708
+    second: foresttilepalete 1_20
+  - first:
+      213: -6740191154126004390
+    second: foresttilepalete 1_21
+  - first:
+      213: 4564694714303701678
+    second: foresttilepalete 1_22
+  - first:
+      213: -289214643989474410
+    second: foresttilepalete 1_23
+  - first:
+      213: -3345737303780596426
+    second: foresttilepalete 1_24
+  - first:
+      213: 5534762336660078665
+    second: foresttilepalete 1_25
+  - first:
+      213: -8293100852069142342
+    second: foresttilepalete 1_26
+  - first:
+      213: -4865891899392710908
+    second: foresttilepalete 1_27
+  - first:
+      213: 1484456001553042209
+    second: foresttilepalete 1_28
+  - first:
+      213: 429387161356258729
+    second: foresttilepalete 1_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foresttilepalete 1_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209f8223017f98b50800000000000000
+      internalID: 6596074778193885442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f4435f81e6bce1e478d3da622d3e162e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      foresttilepalete 1_0: -7581226315277833071
+      foresttilepalete 1_1: -8892840957091976091
+      foresttilepalete 1_10: 51770847739605405
+      foresttilepalete 1_11: 976491849891469198
+      foresttilepalete 1_12: -171756756135746838
+      foresttilepalete 1_13: -654949449093921965
+      foresttilepalete 1_14: -4848705405963782759
+      foresttilepalete 1_15: -8603398686647770070
+      foresttilepalete 1_16: 584460940352092989
+      foresttilepalete 1_17: 5779901865204795643
+      foresttilepalete 1_18: 293479541519484177
+      foresttilepalete 1_19: 4894052002453914667
+      foresttilepalete 1_2: -5146217254645480492
+      foresttilepalete 1_20: -8454178350875152708
+      foresttilepalete 1_21: -6740191154126004390
+      foresttilepalete 1_22: 4564694714303701678
+      foresttilepalete 1_23: -289214643989474410
+      foresttilepalete 1_24: -3345737303780596426
+      foresttilepalete 1_25: 5534762336660078665
+      foresttilepalete 1_26: -8293100852069142342
+      foresttilepalete 1_27: -4865891899392710908
+      foresttilepalete 1_28: 1484456001553042209
+      foresttilepalete 1_29: 429387161356258729
+      foresttilepalete 1_3: 4393749879427357856
+      foresttilepalete 1_4: -8833958586596766148
+      foresttilepalete 1_5: 1636034405229320832
+      foresttilepalete 1_6: 2341157599051834950
+      foresttilepalete 1_7: 6596074778193885442
+      foresttilepalete 1_8: -3668294499657684476
+      foresttilepalete 1_9: 5683542938164210920
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

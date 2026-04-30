@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: c3d20c64b21f64a4683b99c45082995f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8867083455508853990
+    second: Pintura-Amarilla_0
+  - first:
+      213: -5429507731829970966
+    second: Pintura-Amarilla_1
+  - first:
+      213: 4919229264785492440
+    second: Pintura-Amarilla_2
+  - first:
+      213: -5850380421610938776
+    second: Pintura-Amarilla_3
+  - first:
+      213: -4358660286741307005
+    second: Pintura-Amarilla_4
+  - first:
+      213: -2795247679373116376
+    second: Pintura-Amarilla_5
+  - first:
+      213: 1696208581830113487
+    second: Pintura-Amarilla_6
+  - first:
+      213: -6678701097831906698
+    second: Pintura-Amarilla_7
+  - first:
+      213: 6253575999097357376
+    second: Pintura-Amarilla_8
+  - first:
+      213: -4686868316859112565
+    second: Pintura-Amarilla_9
+  - first:
+      213: 6629973219743887461
+    second: Pintura-Amarilla_10
+  - first:
+      213: -5250950903201389784
+    second: Pintura-Amarilla_11
+  - first:
+      213: 7870858534280476869
+    second: Pintura-Amarilla_12
+  - first:
+      213: 9000237980931049024
+    second: Pintura-Amarilla_13
+  - first:
+      213: 5869609238217336435
+    second: Pintura-Amarilla_14
+  - first:
+      213: -4154887988848084069
+    second: Pintura-Amarilla_15
+  - first:
+      213: -6235912752454545438
+    second: Pintura-Amarilla_16
+  - first:
+      213: -8164265774555599190
+    second: Pintura-Amarilla_17
+  - first:
+      213: -469712186573682679
+    second: Pintura-Amarilla_18
+  - first:
+      213: 4385267720513862094
+    second: Pintura-Amarilla_19
+  - first:
+      213: -2541965124060517061
+    second: Pintura-Amarilla_20
+  - first:
+      213: -582999984895611037
+    second: Pintura-Amarilla_21
+  - first:
+      213: 2053534991895429409
+    second: Pintura-Amarilla_22
+  - first:
+      213: 560892623263154465
+    second: Pintura-Amarilla_23
+  - first:
+      213: -2518451368023725869
+    second: Pintura-Amarilla_24
+  - first:
+      213: -8136669348043055491
+    second: Pintura-Amarilla_25
+  - first:
+      213: 1064925885487901637
+    second: Pintura-Amarilla_26
+  - first:
+      213: 570122920387262236
+    second: Pintura-Amarilla_27
+  - first:
+      213: -3063309555103041547
+    second: Pintura-Amarilla_28
+  - first:
+      213: -7587503850954795469
+    second: Pintura-Amarilla_29
+  - first:
+      213: 2518906984046574408
+    second: Pintura-Amarilla_30
+  - first:
+      213: 5254131067744068934
+    second: Pintura-Amarilla_31
+  - first:
+      213: -5522464212148297146
+    second: Pintura-Amarilla_32
+  - first:
+      213: -2506090587113157268
+    second: Pintura-Amarilla_33
+  - first:
+      213: -6152901754269262948
+    second: Pintura-Amarilla_34
+  - first:
+      213: -4112973906464464810
+    second: Pintura-Amarilla_35
+  - first:
+      213: 254468182029205789
+    second: Pintura-Amarilla_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pintura-Amarilla_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bc6a8b39ac1f480800000000000000
+      internalID: -8867083455508853990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7a9031c7386a4b0800000000000000
+      internalID: -5429507731829970966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9ce3004fc944440800000000000000
+      internalID: 4919229264785492440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86edaf0d0064fcea0800000000000000
+      internalID: -5850380421610938776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381ae28ff8de283c0800000000000000
+      internalID: -4358660286741307005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82cfab3ab094539d0800000000000000
+      internalID: -2795247679373116376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8f3f0e7b42a8710800000000000000
+      internalID: 1696208581830113487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672c7be9cbc7053a0800000000000000
+      internalID: -6678701097831906698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0444b120d3a29c650800000000000000
+      internalID: 6253575999097357376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8364901916e4feb0800000000000000
+      internalID: -4686868316859112565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560ff292485620c50800000000000000
+      internalID: 6629973219743887461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8232aa969ffd027b0800000000000000
+      internalID: -5250950903201389784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8b325a228ea3d60800000000000000
+      internalID: 7870858534280476869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046cf5322c447ec70800000000000000
+      internalID: 9000237980931049024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376ab4ee08a057150800000000000000
+      internalID: 5869609238217336435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b3c2f336fd656c0800000000000000
+      internalID: -4154887988848084069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef4e9314669579a0800000000000000
+      internalID: -6235912752454545438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pintura-Amarilla_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaeebbfb883b2be80800000000000000
+      internalID: -8164265774555599190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 267a0c2d700f1d84aadef4ec24153c68
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Pintura-Amarilla_0: -8867083455508853990
+      Pintura-Amarilla_1: -5429507731829970966
+      Pintura-Amarilla_10: 6629973219743887461
+      Pintura-Amarilla_11: -5250950903201389784
+      Pintura-Amarilla_12: 7870858534280476869
+      Pintura-Amarilla_13: 9000237980931049024
+      Pintura-Amarilla_14: 5869609238217336435
+      Pintura-Amarilla_15: -4154887988848084069
+      Pintura-Amarilla_16: -6235912752454545438
+      Pintura-Amarilla_17: -8164265774555599190
+      Pintura-Amarilla_2: 4919229264785492440
+      Pintura-Amarilla_3: -5850380421610938776
+      Pintura-Amarilla_4: -4358660286741307005
+      Pintura-Amarilla_5: -2795247679373116376
+      Pintura-Amarilla_6: 1696208581830113487
+      Pintura-Amarilla_7: -6678701097831906698
+      Pintura-Amarilla_8: 6253575999097357376
+      Pintura-Amarilla_9: -4686868316859112565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
