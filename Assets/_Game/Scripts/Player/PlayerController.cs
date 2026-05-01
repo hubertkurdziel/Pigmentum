@@ -4,25 +4,26 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps; 
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("GameFeel - Movimiento")]
+    [Header("Movimiento")]
     [SerializeField] private float moveSpeed = 9f;
-    [SerializeField, Tooltip("Rapidez para alcanzar la velocidad máxima")] private float aceleracion = 12f;
-    [SerializeField, Tooltip("Rapidez para frenar al soltar el mando")] private float deceleracion = 16f;
-    [SerializeField, Range(0f, 1f), Tooltip("Control en el aire (1 = total, 0 = nada)")] private float multiplicadorControlAire = 0.8f;
+    [SerializeField] private float aceleracion = 12f;
+    [SerializeField] private float deceleracion = 16f;
+    [SerializeField] private float multiplicadorControlAire = 0.8f;
 
-    [Header("GameFeel - Salto y Gravedad")]
+    [Header("Salto y Gravedad")]
     [SerializeField] private float jumpForce = 22f; 
-    [SerializeField, Tooltip("Gravedad normal del mundo")] private float gravedadBase = 4f;
-    [SerializeField, Tooltip("Multiplicador de gravedad al caer (hace que caiga más rápido y pesado)")] private float multiplicadorCaida = 1.8f;
-    [SerializeField, Tooltip("Límite máximo de velocidad al caer")] private float velocidadMaximaCaida = 25f;
-    [SerializeField, Range(0f, 1f), Tooltip("Cuánto se frena el salto si sueltas el botón en el aire")] private float multiplicadorCorteSalto = 0.5f;
+    [SerializeField] private float gravedadBase = 4f;
+    [SerializeField] private float multiplicadorCaida = 1.8f;
+    [SerializeField] private float velocidadMaximaCaida = 25f;
+    [SerializeField] private float multiplicadorCorteSalto = 0.5f;
 
-    [Header("GameFeel - Asistencias (Perdón)")]
-    [SerializeField, Tooltip("Tiempo para saltar tras caer de un borde")] private float coyoteTime = 0.15f;
-    [SerializeField, Tooltip("Tiempo que recuerda el botón de salto antes de tocar el suelo")] private float jumpBufferTime = 0.15f;
+    [Header("Asistencias")]
+    [SerializeField] private float coyoteTime = 0.15f;
+    [SerializeField] private float jumpBufferTime = 0.15f;
 
     [Header("Dash")]
     [SerializeField] private float dashSpeed = 24f; 
@@ -43,11 +44,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float ledgeClimbXOffset = 1.0f;
     [SerializeField] private float ledgeClimbYOffset = 2.5f;
 
-    [Header("UI Estamina (Zelda Style)")]
+    [Header("Interfaz de Estamina")]
     [SerializeField] private Canvas canvasEstamina; 
     [SerializeField] private GameObject contenedorEstaminaUI; 
     [SerializeField] private Image circuloEstaminaUI; 
-    
     [SerializeField] private float tiempoParaOcultar = 1.5f; 
     [SerializeField] private float velocidadSeguimientoUI = 20f; 
     [SerializeField] private Vector3 offsetUI = new Vector3(-0.6f, 1.2f, 0f); 
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float fuerzaRebotePogo = 20f; 
     private float _siguienteAtaqueTiempo = 0f;
 
-    [Header("Sistema de Vida")]
+    [Header("Sistema de Salud")]
     [SerializeField] private int vidaMax = 5; 
     [SerializeField] private int vidaActual;
     [SerializeField] private GameObject contenedorVida; 
@@ -70,14 +70,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tiempoInvulnerabilidad = 1.5f;
     private bool _esInvulnerable = false;
 
-    [Header("Knockback (Empuje por daño)")]
+    [Header("Empuje por Daño")]
     [SerializeField] private float knockbackForceX = 12f; 
     [SerializeField] private float knockbackForceY = 6f;  
     [SerializeField] private float knockbackDuration = 0.5f; 
     [SerializeField] private Sprite hurtSprite; 
     private bool _isKnockedBack = false;
 
-    [Header("Gancho (Grapple)")]
+    [Header("Sistema de Anclaje")]
     [SerializeField] private float radioGancho = 8f; 
     [SerializeField] private float fuerzaBalanceo = 10f; 
     [SerializeField] private LayerMask grappleLayer; 
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.4f, 0.1f);
     [SerializeField] private Vector2 wallCheckSize   = new Vector2(0.2f, 0.4f);
     
-    [Header("Capas (Tilemaps)")]
+    [Header("Capas y Entorno")]
     [SerializeField] private LayerMask floorLayer;
     [SerializeField] private LayerMask wallLayer;
 
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject transicionMuertePrefab; 
     [SerializeField] private GameObject orbesMuertePrefab;
 
-    [Header("Sonidos de Pasos por Material (Tilemap)")]
+    [Header("Audio de Locomoción")]
     [SerializeField] private AudioClip[] sfxPasosPorDefecto; 
     [SerializeField] private AudioClip[] sfxPasosHierba;
     [SerializeField] private AudioClip[] sfxPasosMadera;
@@ -109,35 +109,33 @@ public class PlayerController : MonoBehaviour
     private float _pasoTimer;
     private string _nombreTileActual = ""; 
 
-    [Header("Sonidos de Combate y Vida")]
+    [Header("Audio de Combate y Estado")]
     [SerializeField] private AudioClip sfxAtaque;         
     [SerializeField] private AudioClip sfxImpactoEnemigo; 
     [SerializeField] private AudioClip sfxRecibirDano;    
     [SerializeField] private AudioClip sfxRecuperarVida;
 
-    [Header("Sonidos de Acción")]
+    [Header("Audio de Acciones")]
     [SerializeField] private AudioClip sfxSaltoCorto; 
     [SerializeField] private AudioClip sfxSaltoLargo; 
     [SerializeField] private AudioClip sfxDash;
     [SerializeField] private AudioClip sfxGancho;
     [SerializeField] private AudioClip sfxBalanceoBucle;
     
-    [Header("Sonidos de Escalada")]
+    [Header("Audio de Escalada")]
     [SerializeField] private AudioClip sfxAgarreBorde;
     [SerializeField] private AudioClip sfxEscalando;
     [SerializeField] private AudioClip sfxDeslizar;
 
-
-    [Header("Efectos Visuales - Dash (Estela)")]
+    [Header("Efectos de Estela")]
     [SerializeField] private float tiempoEntreFantasmas = 0.05f; 
     [SerializeField] private float duracionFantasma = 0.3f; 
     [SerializeField] private Color colorEstela = new Color(0f, 0.5f, 1f, 0.5f); 
 
-    [Header("Coleccionables")]
+    [Header("Economía")]
     public int totalGotas = 0;
     public TMPro.TextMeshProUGUI textoGotasUI; 
 
-    // ── Referencias ──────────────────────────────────────────────
     private Rigidbody2D         _rb;
     private Collider2D          _col; 
     private InputSystem_Actions _controls;
@@ -146,14 +144,12 @@ public class PlayerController : MonoBehaviour
     private DistanceJoint2D     _dj; 
     private LineRenderer        _lr; 
 
-    // ── Input & Timers ───────────────────────────────────────────
     private Vector2 _moveInput;
     private bool    _isHoldingGrab;
     private bool    _dropPressed;
     private float   _coyoteTimeCounter;
     private float   _jumpBufferCounter;
 
-    // ── Sensores & Estado ─────────────────────────────────────────
     private bool _isGrounded;
     private bool _isTouchingWall;
     private bool _isTouchingWallAbove;
@@ -161,14 +157,12 @@ public class PlayerController : MonoBehaviour
     private enum ClimbState { None, Climbing, AtLedge, Exhausted, Swinging }
     private ClimbState _climbState = ClimbState.None;
 
-    // ── Misc ─────────────────────────────────────────────────────
     private float   _currentStamina;
     private int     _facingDirection = 1;
     private bool    _isLedgeRoutineRunning = false;
     private float   _wallJumpCooldown = 0f;
     private float _puntoAtaqueOffsetBaseX;
     private float _puntoAtaqueOffsetBaseY; 
-    
     private float _wallCheckOffsetBaseX;
     private float _ledgeCheckOffsetBaseX;
 
@@ -277,33 +271,28 @@ public class PlayerController : MonoBehaviour
             else if (_moveInput.x < 0) _facingDirection = -1;
         }
 
-        // --- 1. ESCALAR Y SOLTARSE ---
         _isHoldingGrab = false;
         _dropPressed = false;
 
-        // Teclado
         if (Keyboard.current != null) 
         {
             _isHoldingGrab |= Keyboard.current.leftShiftKey.isPressed;
             _dropPressed |= Keyboard.current.qKey.wasPressedThisFrame;
         }
-        // Mando: Escalar en L2 (leftTrigger), Soltarse en Círculo (buttonEast)
         if (Gamepad.current != null) 
         {
             _isHoldingGrab |= Gamepad.current.leftTrigger.isPressed; 
             _dropPressed |= Gamepad.current.buttonEast.wasPressedThisFrame; 
         }
 
-        // --- 2. PEGAR / ATACAR ---
         bool pulsadoAtaque = false;
         if (Mouse.current != null) pulsadoAtaque |= Mouse.current.leftButton.wasPressedThisFrame;
         if (Keyboard.current != null) pulsadoAtaque |= Keyboard.current.jKey.wasPressedThisFrame;
-        // Mando: Pegar en Cuadrado (buttonWest)
         if (Gamepad.current != null) pulsadoAtaque |= Gamepad.current.buttonWest.wasPressedThisFrame;
 
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
-            pulsadoAtaque = false; // Escudo del menú
+            pulsadoAtaque = false; 
         }
 
         if (pulsadoAtaque && Time.time >= _siguienteAtaqueTiempo && _climbState == ClimbState.None)
@@ -312,7 +301,6 @@ public class PlayerController : MonoBehaviour
             _siguienteAtaqueTiempo = Time.time + tiempoEntreAtaques;
         }
 
-        // --- 3. GANCHO ---
         bool botonGanchoPulsado = false;
         bool botonGanchoSoltado = false;
         if (Keyboard.current != null)
@@ -320,7 +308,6 @@ public class PlayerController : MonoBehaviour
             botonGanchoPulsado |= Keyboard.current.eKey.wasPressedThisFrame;
             botonGanchoSoltado |= Keyboard.current.eKey.wasReleasedThisFrame;
         }
-        // Mando: Gancho en R1 (rightShoulder)
         if (Gamepad.current != null)
         {
             botonGanchoPulsado |= Gamepad.current.rightShoulder.wasPressedThisFrame;
@@ -330,10 +317,8 @@ public class PlayerController : MonoBehaviour
         if (botonGanchoPulsado && _climbState == ClimbState.None) IntentarEnganchar();
         if (botonGanchoSoltado && _climbState == ClimbState.Swinging) SoltarGancho();
 
-        // --- 4. DASH ---
         bool dashPulsado = false;
         if (Keyboard.current != null) dashPulsado |= Keyboard.current.leftShiftKey.wasPressedThisFrame;
-        // Mando: Dash en R2 (rightTrigger)
         if (Gamepad.current != null) dashPulsado |= Gamepad.current.rightTrigger.wasPressedThisFrame;
         
         if (dashPulsado && _canDash && _climbState == ClimbState.None && _currentStamina >= costeEstaminaDash)
@@ -363,6 +348,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Administra la ejecución de físicas según el estado actual de movimiento del objeto[cite: 28].
         if (_isLedgeRoutineRunning || _isKnockedBack || _isDashing || _estaReapareciendo) return; 
 
         switch (_climbState)
@@ -402,8 +388,10 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y * multiplicadorCorteSalto);
         }
     }
+
     private void HandleJumpExecution()
     {
+        // Controla el lanzamiento del impulso de salto considerando márgenes de tiempo (coyote time y buffer)[cite: 28].
         if (_jumpBufferCounter > 0f && !_isLedgeRoutineRunning && _wallJumpCooldown <= 0f && !_isKnockedBack)
         {
             if (_coyoteTimeCounter > 0f && _climbState == ClimbState.None)
@@ -512,6 +500,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemigo")) TomarDano(1, collision.contacts[0].point);
     }
 
+    // Gestiona la reducción de salud, efectos visuales de daño y frames de invulnerabilidad tras un impacto[cite: 28].
     public void TomarDano(int cantidad, Vector2 pointOfContact)
     {
         if (_esInvulnerable || _isLedgeRoutineRunning || _isKnockedBack || _estaReapareciendo) return;
@@ -609,6 +598,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator SecuenciaMuerte()
     {
+        // Restablece el estado del objeto y lo reubica en el punto de control correspondiente[cite: 28].
         _estaReapareciendo = true;
         _spriteRenderer.enabled = false;
         if (_col != null) _col.enabled = false; 
@@ -628,11 +618,22 @@ public class PlayerController : MonoBehaviour
         {
             if (vidaActual <= 0)
             {
-                transform.position = GameManager.Instancia.ultimoHardCheckpoint;
-                vidaActual = vidaMax; 
-                RestaurarVidasUI(); 
-                
-                if (AudioManager.Instancia != null && sfxRecuperarVida != null) AudioManager.Instancia.ReproducirSFX(sfxRecuperarVida);
+                // --- NUEVA LÓGICA DE MUERTE EN EL BOSS ---
+                // OJO: Cambia "Nivel Boss" por el nombre exacto de tu escena del jefe
+                if (SceneManager.GetActiveScene().name == "Boss") 
+                {
+                    GameManager.Instancia.MorirEnBoss();
+                    yield break; // Detenemos la corrutina aquí porque vamos a cargar otra escena
+                }
+                else
+                {
+                    // Muerte normal en el resto del juego
+                    transform.position = GameManager.Instancia.ultimoHardCheckpoint;
+                    vidaActual = vidaMax; 
+                    RestaurarVidasUI(); 
+                    
+                    if (AudioManager.Instancia != null && sfxRecuperarVida != null) AudioManager.Instancia.ReproducirSFX(sfxRecuperarVida);
+                }
             }
             else transform.position = GameManager.Instancia.ultimoSoftCheckpoint;
         }
@@ -660,6 +661,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleClimbStateMachine()
     {
+        // Controla las transiciones lógicas entre los estados de escalada, suspensión y agotamiento[cite: 28].
         switch (_climbState)
         {
             case ClimbState.None:
@@ -667,12 +669,12 @@ public class PlayerController : MonoBehaviour
                 break;
             case ClimbState.Climbing:
                 if (!_isTouchingWallAbove && _moveInput.y > 0) { EnterLedge(); break; }
-                if (_dropPressed) { EnterExhausted(); break; } // <-- CAMBIO AQUÍ
+                if (_dropPressed) { EnterExhausted(); break; } 
                 if (!_isTouchingWall) { ExitClimb(); break; }
-                if (_currentStamina <= 0f) EnterExhausted();   // <-- CAMBIO AQUÍ
+                if (_currentStamina <= 0f) EnterExhausted();   
                 break;
             case ClimbState.AtLedge:
-                if (_dropPressed) { EnterExhausted(); break; } // <-- CAMBIO AQUÍ
+                if (_dropPressed) { EnterExhausted(); break; } 
                 
                 bool subirBordePulsado = false;
                 if (Keyboard.current != null) subirBordePulsado |= Keyboard.current.lKey.wasPressedThisFrame;
@@ -681,7 +683,7 @@ public class PlayerController : MonoBehaviour
                 if (subirBordePulsado) StartCoroutine(LedgeClimbRoutine());
                 break;
             case ClimbState.Exhausted:
-                if (_isGrounded) { ExitClimb(); break; }       // <-- CAMBIO AQUÍ
+                if (_isGrounded) { ExitClimb(); break; }       
                 if (!_isTouchingWall) ExitClimb();
                 break;
         }
@@ -708,20 +710,17 @@ public class PlayerController : MonoBehaviour
         _rb.gravityScale = 0f;
         _rb.linearVelocity = Vector2.zero;
 
-        // 1. CORTAR SONIDO DE ESCALADA AL ENGANCHARSE AL BORDE
         if (altavozPasos != null) 
         { 
             altavozPasos.Stop(); 
             altavozPasos.loop = false; 
         }
 
-        // 2. REPRODUCIR EL GOLPE DE AGARRE AL BORDE
         if (AudioManager.Instancia != null && sfxAgarreBorde != null)
         {
             AudioManager.Instancia.ReproducirSFX(sfxAgarreBorde);
         }
 
-        // 3. Físicas del borde
         if (ledgeCheck != null && wallCheck != null)
         {
             Vector2 rayStart = new Vector2(wallCheck.position.x + (_facingDirection * 0.5f), ledgeCheck.position.y + 1f);
@@ -734,23 +733,23 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
     private void ExitClimb()
     {
         _climbState = ClimbState.None;
         _rb.gravityScale = gravedadBase;
         
-        // CORTAR SONIDO AL SALTAR DE LA PARED O SOLTARSE
         if (altavozPasos != null) 
         { 
             altavozPasos.Stop(); 
             altavozPasos.loop = false; 
         }
     }
+
     private void EnterExhausted()
     {
         _climbState = ClimbState.Exhausted;
         
-        // AL CAER/RESBALAR: Ponemos el sonido de resbalar, o cortamos si no hay
         if (altavozPasos != null)
         {
             if (sfxDeslizar != null)
@@ -776,12 +775,10 @@ public class PlayerController : MonoBehaviour
         else if (_moveInput.y < 0) targetVelocityY = -climbSpeed;
         _rb.linearVelocity = new Vector2(0f, targetVelocityY);
 
-        // --- LÓGICA DE SONIDO: ESCALADA EN BUCLE ---
         if (Mathf.Abs(targetVelocityY) > 0f)
         {
             if (altavozPasos != null && sfxEscalando != null)
             {
-                // Solo le damos a Play si NO estaba sonando ya (evita el tartamudeo)
                 if (altavozPasos.clip != sfxEscalando || !altavozPasos.isPlaying)
                 {
                     altavozPasos.clip = sfxEscalando;
@@ -792,7 +789,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Si el jugador se queda colgado y quieto, pausamos el sonido del roce
             if (altavozPasos != null && altavozPasos.clip == sfxEscalando)
             {
                 altavozPasos.Pause(); 
@@ -831,6 +827,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckSurroundings()
     {
+        // Detecta la presencia de superficies y actualiza el tipo de terreno actual[cite: 28].
         Collider2D sueloDetectado = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, floorLayer | wallLayer);
         _isGrounded = sueloDetectado != null;
 
@@ -846,7 +843,6 @@ public class PlayerController : MonoBehaviour
                 if (tile != null)
                 {
                     _nombreTileActual = tile.name.ToLower(); 
-                    Debug.Log("Estoy pisando el bloque: " + _nombreTileActual);
                 }
             }
             else
@@ -858,6 +854,7 @@ public class PlayerController : MonoBehaviour
         _isTouchingWall  = Physics2D.OverlapBox(wallCheck.position,   wallCheckSize,   0f, wallLayer | floorLayer);
         _isTouchingWallAbove = ledgeCheck != null ? Physics2D.OverlapBox(ledgeCheck.position, wallCheckSize, 0f, wallLayer | floorLayer) : _isTouchingWall;
     }
+
     private void UpdateAnimations()
     {
         if (_anim == null || _isKnockedBack) return; 
@@ -909,6 +906,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Procesa el ataque del objeto, detecta objetivos en el área de efecto y aplica impulsos de retroceso si es necesario[cite: 28].
     private void Atacar()
     {
         if (AudioManager.Instancia != null && sfxAtaque != null) AudioManager.Instancia.ReproducirSFX(sfxAtaque);
@@ -977,6 +975,7 @@ public class PlayerController : MonoBehaviour
 
     private void IntentarEnganchar()
     {
+        // Busca puntos de anclaje válidos en el radio especificado y activa el componente de unión física[cite: 28].
         Collider2D[] pivotesCercanos = Physics2D.OverlapCircleAll(transform.position, radioGancho, grappleLayer);
         if (pivotesCercanos.Length > 0 && _dj != null)
         {
@@ -1006,6 +1005,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
     private void SoltarGancho()
     {
         if (_dj != null) _dj.enabled = false;
@@ -1018,6 +1018,7 @@ public class PlayerController : MonoBehaviour
             altavozPasos.loop = false; 
         }
     }
+
     private void SwingingPhysics()
     {
         if (Mathf.Abs(_moveInput.x) > 0.1f) _rb.AddForce(Vector2.right * _moveInput.x * fuerzaBalanceo, ForceMode2D.Force);
@@ -1025,28 +1026,30 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator RutinaDash(Vector2 direccionDash)
     {
-    _canDash = false;
-    _isDashing = true;
+        // Ejecuta un desplazamiento lineal a velocidad constante durante un tiempo definido e inicia el tiempo de recarga[cite: 28].
+        _canDash = false;
+        _isDashing = true;
 
-    if (AudioManager.Instancia != null && sfxDash != null) 
-    {
-        AudioManager.Instancia.ReproducirSFX(sfxDash); 
+        if (AudioManager.Instancia != null && sfxDash != null) 
+        {
+            AudioManager.Instancia.ReproducirSFX(sfxDash); 
+        }
+
+        StartCoroutine(RutinaEstelaDash()); 
+        float gravedadOriginal = _rb.gravityScale; 
+        _rb.gravityScale = 0f; 
+        _rb.linearVelocity = direccionDash * dashSpeed; 
+        
+        yield return new WaitForSeconds(dashDuration); 
+        
+        _rb.gravityScale = gravedadOriginal; 
+        _rb.linearVelocity = _rb.linearVelocity * 0.5f; 
+        _isDashing = false; 
+        
+        yield return new WaitForSeconds(dashCooldown); 
+        _canDash = true; 
     }
 
-    StartCoroutine(RutinaEstelaDash()); 
-    float gravedadOriginal = _rb.gravityScale; 
-    _rb.gravityScale = 0f; 
-    _rb.linearVelocity = direccionDash * dashSpeed; 
-    
-    yield return new WaitForSeconds(dashDuration); 
-    
-    _rb.gravityScale = gravedadOriginal; 
-    _rb.linearVelocity = _rb.linearVelocity * 0.5f; 
-    _isDashing = false; 
-    
-    yield return new WaitForSeconds(dashCooldown); 
-    _canDash = true; 
-    }
     private IEnumerator RutinaEstelaDash()
     {
         while (_isDashing) { CrearFantasma(); yield return new WaitForSeconds(tiempoEntreFantasmas); }
@@ -1099,7 +1102,6 @@ public class PlayerController : MonoBehaviour
 
     private void ReproducirPaso()
     {
-        Debug.Log("¡El código ha dado la orden de sonar un paso!");
         if (AudioManager.Instancia == null) return;
         AudioClip[] arrayAUsar = sfxPasosPorDefecto; 
 
@@ -1117,10 +1119,9 @@ public class PlayerController : MonoBehaviour
 
         if (arrayAUsar != null && arrayAUsar.Length > 0)
         {
-        int indiceAleatorio = Random.Range(0, arrayAUsar.Length);
-        
-        altavozPasos.clip = arrayAUsar[indiceAleatorio];
-        altavozPasos.Play();
+            int indiceAleatorio = Random.Range(0, arrayAUsar.Length);
+            altavozPasos.clip = arrayAUsar[indiceAleatorio];
+            altavozPasos.Play();
         }
     }
 
@@ -1154,9 +1155,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 👇 ¡AQUÍ ESTÁ LA NUEVA FUNCIÓN AÑADIDA! 👇
-    // Al llamarse "Curar", la bolita la detectará sin problemas,
-    // y como llama a "RecuperarVida", aprovechará todo tu sistema de UI y sonidos que ya tenías hecho.
     public void Curar(int cantidad)
     {
         RecuperarVida(cantidad);

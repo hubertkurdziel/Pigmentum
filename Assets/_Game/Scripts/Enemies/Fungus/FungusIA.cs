@@ -43,8 +43,8 @@ public class FungusIA : MonoBehaviour
     [SerializeField] private AudioClip sfxSalto;
     [SerializeField] private AudioClip sfxRecibirDano;
     [SerializeField] private AudioClip sfxMorir;
-    [SerializeField] private AudioClip sfxCargarExplosion; // Sonido de hincharse antes de explotar
-    [SerializeField] private AudioClip sfxExplotar;        // Sonido del estallido tóxico
+    [SerializeField] private AudioClip sfxCargarExplosion; 
+    [SerializeField] private AudioClip sfxExplotar;        
 
     private Rigidbody2D _rb;
     private Animator _anim;
@@ -59,12 +59,10 @@ public class FungusIA : MonoBehaviour
         _anim = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
-        // Si se te olvida poner el AudioSource en el Inspector, lo busca automáticamente
         if (_audioSource == null) _audioSource = GetComponent<AudioSource>();
-
         if (_spriteRenderer != null) _shaderOriginal = _spriteRenderer.material.shader;
+        
         _vidaActual = vidaMaxima;
-
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) _player = playerObj.transform;
 
@@ -84,11 +82,11 @@ public class FungusIA : MonoBehaviour
         }
     }
 
+    // Gestiona la reducción de salud y la aplicación de fuerzas de retroceso por impacto[cite: 15].
     public void RecibirDano(int cantidad, Vector2 posicionAtacante)
     {
         if (_esInvulnerable) return; 
 
-        // Reproducir sonido de daño
         if (_audioSource != null && sfxRecibirDano != null && _vidaActual - cantidad > 0)
         {
             _audioSource.PlayOneShot(sfxRecibirDano);
@@ -126,13 +124,12 @@ public class FungusIA : MonoBehaviour
 
     private void Morir()
     {
-        // 1. Sonido de muerte
+        // Controla la desactivación de componentes físicos y visuales antes de la eliminación del objeto[cite: 15].
         if (_audioSource != null && sfxMorir != null)
         {
             _audioSource.PlayOneShot(sfxMorir);
         }
 
-        // 2. Efectos visuales y drops
         if (explosionMuertePrefab != null) Instantiate(explosionMuertePrefab, transform.position, Quaternion.identity);
 
         if (Random.Range(0f, 100f) <= probabilidadDropVida && prefabBolaVida != null)
@@ -149,7 +146,6 @@ public class FungusIA : MonoBehaviour
             }
         }
 
-        // 3. Ocultar y destruir tras acabar el sonido
         if (_spriteRenderer != null) _spriteRenderer.enabled = false;
         if (_rb != null) _rb.simulated = false;
 
@@ -159,6 +155,7 @@ public class FungusIA : MonoBehaviour
 
     IEnumerator RutinaIA()
     {
+        // Bucle de decisión que alterna entre persecución, ataque por proximidad o reposo[cite: 15].
         while (true)
         {
             if (!_estaAtacando && _player != null)
@@ -180,7 +177,6 @@ public class FungusIA : MonoBehaviour
     {
         if (_player == null) return;
 
-        // Sonido al saltar
         if (_audioSource != null && sfxSalto != null)
         {
             _audioSource.PlayOneShot(sfxSalto);
@@ -202,9 +198,9 @@ public class FungusIA : MonoBehaviour
 
     IEnumerator SecuenciaExplosion()
     {
+        // Gestiona la secuencia de carga, activación del ataque de área y fase de recuperación[cite: 15].
         _estaAtacando = true;
 
-        // Sonido de cargar la explosión (como una mecha o la seta hinchándose)
         if (_audioSource != null && sfxCargarExplosion != null)
         {
             _audioSource.PlayOneShot(sfxCargarExplosion);
@@ -225,7 +221,6 @@ public class FungusIA : MonoBehaviour
 
     public void EjecutarExplosionFisica()
     {
-        // Sonido del estallido y la nube tóxica
         if (_audioSource != null && sfxExplotar != null)
         {
             _audioSource.PlayOneShot(sfxExplotar);

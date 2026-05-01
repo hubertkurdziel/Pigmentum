@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HardCheckpoint : MonoBehaviour
 {
@@ -16,13 +17,14 @@ public class HardCheckpoint : MonoBehaviour
     [SerializeField] private ParticleSystem particulasHumo; 
 
     [Header("Sonido")]
-    [SerializeField] private AudioSource audioSourceHoguera; // <-- NUEVO
-    [SerializeField] private AudioClip sfxFuegoEncendido;    // <-- NUEVO
+    [SerializeField] private AudioSource audioSourceHoguera; 
+    [SerializeField] private AudioClip sfxFuegoEncendido;    
 
     private bool _yaActivado = false;
 
     private void Start()
     {
+        // Inicializa el estado visual y sonoro del objeto como desactivado[cite: 31].
         if (spriteRenderer != null && spriteApagada != null)
         {
             spriteRenderer.sprite = spriteApagada;
@@ -33,7 +35,6 @@ public class HardCheckpoint : MonoBehaviour
             particulasHumo.Stop();
         }
 
-        // Nos aseguramos de que no suene nada al empezar apagada
         if (audioSourceHoguera != null)
         {
             audioSourceHoguera.Stop();
@@ -48,7 +49,9 @@ public class HardCheckpoint : MonoBehaviour
             
             if (GameManager.Instancia != null)
             {
-                GameManager.Instancia.GuardarHardCheckpoint(puntoDeAparicion.position);
+                // AHORA MANDAMOS LA POSICIÓN Y EL NÚMERO DE LA ESCENA ACTUAL
+                int escenaActual = SceneManager.GetActiveScene().buildIndex;
+                GameManager.Instancia.GuardarHardCheckpoint(puntoDeAparicion.position, escenaActual);
             }
 
             if (particulasHumo != null)
@@ -56,20 +59,19 @@ public class HardCheckpoint : MonoBehaviour
                 particulasHumo.Play();
             }
 
-            // REPRODUCIR SONIDO DEL FUEGO
             if (audioSourceHoguera != null && sfxFuegoEncendido != null)
             {
                 audioSourceHoguera.clip = sfxFuegoEncendido;
-                audioSourceHoguera.loop = true; // Para que no pare de sonar
+                audioSourceHoguera.loop = true; 
                 audioSourceHoguera.Play();
             }
 
             StartCoroutine(AnimarFuego());
         }
     }
-
     private IEnumerator AnimarFuego()
     {
+        // Gestiona la secuencia de imágenes para crear el efecto de animación cíclica[cite: 31].
         int frameActual = 0;
 
         while (true)

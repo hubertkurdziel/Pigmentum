@@ -9,7 +9,7 @@ public class ProyectilPerseguidor : MonoBehaviour
     
     [Header("Efectos")]
     public GameObject explosionPrefab; 
-    public AudioClip sfxExplosion; // <-- NUEVO: Sonido de explosión
+    public AudioClip sfxExplosion; 
     
     private Transform _player;
     private Rigidbody2D _rb;
@@ -35,6 +35,7 @@ public class ProyectilPerseguidor : MonoBehaviour
         _rb.angularVelocity = 0f; 
     }
 
+    // Calcula la trayectoria de seguimiento hacia el objetivo o el retorno hacia el emisor si el estado es modificado[cite: 16].
     private void FixedUpdate()
     {
         if (_desviado)
@@ -67,22 +68,20 @@ public class ProyectilPerseguidor : MonoBehaviour
 
     private void Explotar()
     {
-        // 1. Instanciar partículas
         if (explosionPrefab != null)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
         
-        // 2. Reproducir sonido a través del mánager global
         if (AudioManager.Instancia != null && sfxExplosion != null)
         {
             AudioManager.Instancia.ReproducirSFX(sfxExplosion);
         }
         
-        // 3. Destruir el objeto
         Destroy(gameObject);
     }
 
+    // Gestiona la detección de impactos y aplica daño al objetivo correspondiente según la facción actual[cite: 16].
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_desviado)

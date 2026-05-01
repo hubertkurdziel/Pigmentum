@@ -22,7 +22,7 @@ public class EnemigoPared : MonoBehaviour
     private Material _materialOriginal;
 
     [Header("Efectos de Sonido")]
-    public AudioClip sfxEscupir; // <-- NUEVO: Sonido al disparar la bola
+    public AudioClip sfxEscupir; 
 
     [Header("Vida")]
     public int vidaMaxima = 3;
@@ -73,13 +73,13 @@ public class EnemigoPared : MonoBehaviour
         if (_anim != null) _anim.SetTrigger("Atacar"); 
     }
 
+    // Instancia el proyectil y establece la rotación inicial orientada hacia la posición detectada del usuario[cite: 17].
     public void RealizarDisparoInstancia()
     {
         if (_estaMuerto) return; 
 
         if (proyectilPrefab != null && puntoDisparo != null && _player != null)
         {
-            // --- NUEVO: Reproducir sonido de escupir ---
             if (AudioManager.Instancia != null && sfxEscupir != null)
             {
                 AudioManager.Instancia.ReproducirSFX(sfxEscupir);
@@ -129,18 +129,17 @@ public class EnemigoPared : MonoBehaviour
         }
     }
 
+    // Gestiona la destrucción del objeto y la probabilidad de generación de elementos de recompensa[cite: 17].
     private void Morir()
     {
         _estaMuerto = true;
         if (explosionMuertePrefab() != null) Instantiate(explosionMuertePrefab(), transform.position, Quaternion.identity);
 
-        // --- Drop de Vida ---
         if (Random.Range(0f, 100f) <= probabilidadDropVida && prefabBolaVida != null)
         {
             Instantiate(prefabBolaVida, transform.position, Quaternion.identity);
         }
 
-        // --- Drop de Monedas (Efecto Piñata) ---
         if (prefabMonedaDorada != null)
         {
             int cantidadMonedas = Random.Range(minMonedasDrop, maxMonedasDrop + 1);

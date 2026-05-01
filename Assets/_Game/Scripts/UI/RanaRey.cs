@@ -9,8 +9,8 @@ public class RanaRey : MonoBehaviour
 
     [Header("Drops (Piñata)")]
     [SerializeField] private GameObject prefabMonedaDorada;
-    [SerializeField, Tooltip("Monedas que suelta cada vez que le pegas")] private int monedasPorGolpe = 3;
-    [SerializeField, Tooltip("Monedas que escupe al explotar")] private int monedasMuerte = 50;
+    [SerializeField] private int monedasPorGolpe = 3;
+    [SerializeField] private int monedasMuerte = 50;
 
     [Header("Rebote y Squash (Boing)")]
     [SerializeField] private float fuerzaRebote = 30f;
@@ -19,9 +19,8 @@ public class RanaRey : MonoBehaviour
     [SerializeField] private float factorEnsancheX = 1.3f;
 
     [Header("Sonidos")]
-    [SerializeField] private AudioClip sfxInflar; // <-- NUEVO: Sonido para cuando recupera su forma
+    [SerializeField] private AudioClip sfxInflar;
 
-    // --- NUEVO: Hueco para la corona ---
     [Header("Cosméticos")]
     [SerializeField] private GameObject coronaObj;
 
@@ -35,7 +34,7 @@ public class RanaRey : MonoBehaviour
         _escalaOriginal = transform.localScale;
     }
 
-    // Si el jugador le salta en la cabeza, rebotará y la rana recibirá 1 de daño
+    // Procesa la colisión con el jugador para aplicar un impulso de rebote y reducir la salud.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_estaMuerta) return;
@@ -47,42 +46,38 @@ public class RanaRey : MonoBehaviour
             {
                 Vector2 direccionRebote = (collision.transform.position - transform.position).normalized;
                 
-                // Forzamos que siempre empuje un poco hacia arriba para que sea cómodo saltar
                 if (direccionRebote.y < 0.5f) direccionRebote.y = 1f; 
                 direccionRebote.Normalize();
 
                 rbJugador.linearVelocity = Vector2.zero;
                 rbJugador.AddForce(direccionRebote * fuerzaRebote, ForceMode2D.Impulse);
 
-                // Recibe 1 de daño por el pisotón
                 RecibirDano(1);
             }
         }
     }
 
-    // Esta función la llamará tu espada
+    // Gestiona la reducción de vida, la activación de efectos visuales y la lógica de muerte.
     public void RecibirDano(int cantidad)
     {
         if (_estaMuerta) return;
 
         _vidaActual -= cantidad;
 
-        // 1. Efecto visual de boing (squash & stretch)
         if (_rutinaSquash != null) StopCoroutine(_rutinaSquash);
         _rutinaSquash = StartCoroutine(RutinaAplastarse());
 
         if (_vidaActual > 0)
         {
-            // 2. Suelta el "cambio suelto" por el golpe
             SoltarMonedas(monedasPorGolpe);
         }
         else
         {
-            // 3. Muere y suelta el premio gordo
             Morir();
         }
     }
 
+    // Instancia objetos de recompensa y les aplica fuerzas físicas aleatorias para su dispersión.
     private void SoltarMonedas(int cantidad)
     {
         if (prefabMonedaDorada == null) return;
@@ -94,34 +89,33 @@ public class RanaRey : MonoBehaviour
             
             if (rbMoneda != null)
             {
-                // Dirección en forma de "fuente" hacia arriba y los lados
                 float dirX = Random.Range(-1f, 1f);
                 float dirY = Random.Range(0.8f, 1.5f);
-                float fuerza = Random.Range(10f, 25f); // Fuerza aleatoria para que se dispersen
+                float fuerza = Random.Range(10f, 25f);
 
                 rbMoneda.AddForce(new Vector2(dirX, dirY).normalized * fuerza, ForceMode2D.Impulse);
             }
         }
     }
 
+    // Finaliza el estado del objeto, desactiva componentes visuales y genera el botín final.
     private void Morir()
     {
         _estaMuerta = true;
 
-        // --- NUEVO: Apagamos la corona instantáneamente ---
         if (coronaObj != null) coronaObj.SetActive(false);
 
         SoltarMonedas(monedasMuerte);
         Destroy(gameObject, 0.1f);
     }
 
+    // Realiza una deformación elástica mediante la interpolación de la escala y activa sonidos asociados.
     private IEnumerator RutinaAplastarse()
     {
         float tiempo = 0f;
         Vector3 escalaAplastada = new Vector3(_escalaOriginal.x * factorEnsancheX, _escalaOriginal.y * factorAchateY, _escalaOriginal.z);
         float tiempoFase = duracionSquash / 2f;
 
-        // Fase 1: Aplastarse (Squash)
         while (tiempo < tiempoFase)
         {
             tiempo += Time.deltaTime;
@@ -129,13 +123,11 @@ public class RanaRey : MonoBehaviour
             yield return null;
         }
 
-        // --- NUEVO: Reproducir sonido justo cuando empieza a hincharse ---
         if (AudioManager.Instancia != null && sfxInflar != null)
         {
             AudioManager.Instancia.ReproducirSFX(sfxInflar);
         }
 
-        // Fase 2: Volver a su tamaño original (Hinchándose)[cite: 12]
         tiempo = 0f;
         while (tiempo < tiempoFase)
         {

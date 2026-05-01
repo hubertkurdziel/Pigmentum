@@ -3,17 +3,15 @@ using UnityEngine;
 public class MonedaDrop : MonoBehaviour
 {
     [Header("Ajustes de la Moneda Pequeña")]
-    [SerializeField, Tooltip("Valor que suma al contador de gotas")] 
-    private int valorMoneda = 1;
-    [SerializeField, Tooltip("Fuerza base con la que salta al salir del enemigo")] 
-    private float fuerzaSalto = 6f;
+    [SerializeField] private int valorMoneda = 1;
+    [SerializeField] private float fuerzaSalto = 6f;
 
     [Header("Efectos")]
-    [SerializeField, Tooltip("Sonido al recoger la moneda")]
-    private AudioClip sfxRecogerMoneda; // <-- Aquí guardamos tu sonido
+    [SerializeField] private AudioClip sfxRecogerMoneda;
 
     private void Start()
     {
+        // Aplica un impulso físico inicial con dirección y fuerza aleatorias para simular el efecto de expulsión[cite: 20].
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -28,6 +26,7 @@ public class MonedaDrop : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Registra la colisión con el personaje, suma el valor correspondiente al estado y activa la respuesta sonora[cite: 20].
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController scriptJugador = collision.gameObject.GetComponent<PlayerController>();
@@ -36,7 +35,6 @@ public class MonedaDrop : MonoBehaviour
             {
                 scriptJugador.SumarGota(valorMoneda);
                 
-                // Le pasamos el sonido al AudioManager justo antes de desaparecer
                 if (AudioManager.Instancia != null && sfxRecogerMoneda != null)
                 {
                     AudioManager.Instancia.ReproducirSFX(sfxRecogerMoneda);

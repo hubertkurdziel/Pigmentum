@@ -85,6 +85,7 @@ public class FungnatIA : MonoBehaviour
         ElegirNuevoDestinoVagabundeo();
     }
 
+    // Evalúa el estado de detección para alternar entre el comportamiento de patrulla y el ataque[cite: 13].
     private void Update()
     {
         if (_player == null || _esInvulnerable) return; 
@@ -123,6 +124,7 @@ public class FungnatIA : MonoBehaviour
         }
     }
 
+    // Calcula el desplazamiento suavizado integrando un efecto de oscilación senoidal para el vuelo[cite: 13].
     private void VolarHaciaDestino(Vector2 destinoBase)
     {
         float offsetFloteY = Mathf.Sin(Time.time * velocidadFlote) * amplitudFlote;
@@ -137,6 +139,7 @@ public class FungnatIA : MonoBehaviour
         _tiempoVagabundeo = Random.Range(2f, 4f); 
     }
 
+    // Ejecuta la reducción de salud, aplica fuerzas de retroceso e inicia los efectos visuales de daño[cite: 13].
     public void RecibirDano(int cantidad, Vector2 posicionAtacante)
     {
         if (_esInvulnerable) return;
@@ -162,26 +165,23 @@ public class FungnatIA : MonoBehaviour
         else StartCoroutine(EfectoDanoRoutine(direccionGolpe));
     }
 
+    // Gestiona la desactivación de físicas, la generación de recompensas y la destrucción tras los efectos sonoros[cite: 13].
     private void Morir()
     {
-        // 1. Sonido instantáneo
         if (_audioSource != null) 
         {
             _audioSource.Stop(); 
             if (sfxMorir != null) _audioSource.PlayOneShot(sfxMorir);
         }
         
-        // 2. Efectos visuales originales
         if (explosionMuertePrefab != null) Instantiate(explosionMuertePrefab, transform.position, Quaternion.identity);
         if (particulasGolpePrefab != null) Instantiate(particulasGolpePrefab, transform.position, Quaternion.identity);
         
-        // --- Drop de Vida ---
         if (Random.Range(0f, 100f) <= probabilidadDropVida && prefabBolaVida != null)
         {
             Instantiate(prefabBolaVida, transform.position, Quaternion.identity);
         }
 
-        // --- Drop de Monedas (Efecto Piñata) ---
         if (prefabMonedaDorada != null)
         {
             int cantidadMonedas = Random.Range(minMonedasDrop, maxMonedasDrop + 1);
@@ -191,11 +191,9 @@ public class FungnatIA : MonoBehaviour
             }
         }
 
-        // 3. Desactivar visuales/físicas en lugar de destruir al instante
         if (_spriteRenderer != null) _spriteRenderer.enabled = false;
         if (_rb != null) _rb.simulated = false;
 
-        // 4. Destruir cuando acabe el audio
         float tiempoDestruccion = (sfxMorir != null) ? sfxMorir.length : 0.1f;
         Destroy(gameObject, tiempoDestruccion); 
     }
@@ -230,6 +228,7 @@ public class FungnatIA : MonoBehaviour
         _jugadorDetectado = distanciaAlPlayer <= radioDeteccion;
     }
 
+    // Instancia un proyectil dirigido hacia la posición actual del usuario y activa el audio de ataque[cite: 13].
     public void PerformShootEvent()
     {
         if (_audioSource != null && sfxAtacar != null) _audioSource.PlayOneShot(sfxAtacar);

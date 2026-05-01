@@ -8,7 +8,7 @@ public class NubeToxica : MonoBehaviour
 
     private void Start()
     {
-        // La nube se autodestruye cuando pasa su tiempo de vida
+        // Establece la autodestrucción automática del objeto tras completar su tiempo de permanencia[cite: 14].
         Destroy(gameObject, tiempoDeVida);
     }
 
@@ -23,6 +23,7 @@ public class NubeToxica : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        // Aplica daño de forma continuada mientras el usuario se encuentre dentro del volumen de colisión[cite: 14].
         if (collision.CompareTag("Player"))
         {
             PlayerController player = collision.GetComponent<PlayerController>();

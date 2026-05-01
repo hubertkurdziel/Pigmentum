@@ -73,6 +73,7 @@ public class BossFinal : MonoBehaviour
 
     private void Start()
     {
+        // Inicialización de componentes, estado de salud y activación de la pista musical.
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -92,6 +93,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator RutinaCerebro()
     {
+        // Bucle principal que controla la toma de decisiones en la primera fase de combate.
         yield return new WaitForSeconds(2f);
         while (true)
         {
@@ -110,6 +112,7 @@ public class BossFinal : MonoBehaviour
 
     public void RecibirDano(int cantidad)
     {
+        // Gestiona la reducción de salud, efectos visuales de impacto, transiciones de fase y el proceso de destrucción.
         if (_faseActual == FaseBoss.Transicion) return;
         _vidaActual -= cantidad;
         StartCoroutine(RutinaParpadeoDano());
@@ -122,7 +125,6 @@ public class BossFinal : MonoBehaviour
         
         if (_vidaActual <= 0) 
         {
-            // --- NUEVO: Detenemos el sonido de volar (y cualquier otro SFX) antes de morir ---
             if (AudioManager.Instancia != null)
             {
                 AudioManager.Instancia.DetenerSFX();
@@ -140,7 +142,6 @@ public class BossFinal : MonoBehaviour
                 pantallaFinal.IniciarSecuenciaFin(15f);
             }
 
-            // Lógica de Drops (Vida y Monedas)[cite: 6]
             if (Random.Range(0f, 100f) <= probabilidadDropVida && prefabBolaVida != null)
             {
                 GameObject vida = Instantiate(prefabBolaVida, transform.position + Vector3.up * 1f, Quaternion.identity);
@@ -171,6 +172,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator RutinaParpadeoDano()
     {
+        // Intercambia el shader del material para generar un efecto visual de parpadeo.
         Shader shaderBlanco = Shader.Find("GUI/Text Shader");
         _spriteRenderer.material.shader = shaderBlanco;
         _spriteRenderer.color = Color.white;
@@ -184,6 +186,7 @@ public class BossFinal : MonoBehaviour
     
     private IEnumerator SecuenciaTransicion()
     {
+        // Cambia el comportamiento del objeto para iniciar la fase aérea.
         _faseActual = FaseBoss.Transicion;
         _rb.linearVelocity = Vector2.zero;
         _spriteRenderer.material.shader = _shaderOriginal;
@@ -198,6 +201,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator AtaqueEmbestida()
     {
+        // Desplaza el objeto horizontalmente a alta velocidad hasta detectar una colisión con el entorno.
         _estadoActual = EstadoBoss.Embestida;
         _spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(tiempoAvisoEmbestida);
@@ -232,6 +236,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator RutinaVueloLibre()
     {
+        // Controla el movimiento vertical inicial y el ciclo de ataques aleatorios durante la fase aérea.
         _estadoActual = EstadoBoss.VolandoLibre;
         _rb.gravityScale = 0f;
         if (_anim != null) _anim.Play("Volar");
@@ -258,6 +263,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator AtaqueAleatorio()
     {
+        // Posiciona el objeto en el centro y dispara proyectiles en un patrón de abanico.
         _estadoActual = EstadoBoss.AtacandoAbanico;
         ActualizarMirada();
         
@@ -303,6 +309,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator AtaqueCuletazo()
     {
+        // Realiza un seguimiento horizontal del objetivo antes de caer rápidamente sobre su posición.
         _estadoActual = EstadoBoss.Culetazo;
         _rb.linearVelocity = Vector2.zero;
 
@@ -357,6 +364,7 @@ public class BossFinal : MonoBehaviour
 
     private IEnumerator RutinaAgitarBoss(float intensidad)
     {
+        // Genera una oscilación aleatoria en la posición para simular una vibración.
         Vector3 posicionBase = transform.position;
         while (true)
         {

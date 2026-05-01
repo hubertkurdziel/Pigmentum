@@ -16,18 +16,15 @@ public class ParallaxLayerSecuencial : MonoBehaviour
             camaraTransform = Camera.main.transform;
         }
         
-        // Guardamos las posiciones exactas donde empiezan el fondo y la cámara
         posicionInicialFondo = transform.position;
         posicionInicialCamara = camaraTransform.position;
     }
 
-    // Usamos FixedUpdate o LateUpdate dependiendo de cómo se mueva tu personaje
+    // Calcula y aplica la posición del objeto basándose en el desplazamiento relativo de la cámara[cite: 22].
     void FixedUpdate()
     {
-        // Calculamos la distancia total absoluta que ha recorrido la cámara
         Vector3 distanciaRecorrida = (camaraTransform.position - posicionInicialCamara) * multiplicadorParallax;
 
-        // Asignamos la posición exacta basándonos en el inicio + la distancia
         transform.position = new Vector3(
             posicionInicialFondo.x + distanciaRecorrida.x, 
             posicionInicialFondo.y + distanciaRecorrida.y, 

@@ -10,19 +10,19 @@ public class VibracionCamara : MonoBehaviour
 
     void Awake() => Instancia = this;
 
+    // Aplica desplazamientos aleatorios en la jerarquía local para simular un efecto de sacudida[cite: 39].
     void Update()
     {
         if (_tiempoRestante > 0)
         {
-            // Movemos la cámara a una posición aleatoria muy rápido
             transform.localPosition = _posicionOriginal + (Vector3)Random.insideUnitCircle * _fuerzaVibracion;
             _tiempoRestante -= Time.deltaTime;
 
-            // Al terminar, la devolvemos a su sitio
             if (_tiempoRestante <= 0) transform.localPosition = _posicionOriginal;
         }
     }
 
+    // Inicializa los parámetros de duración e intensidad para el efecto de movimiento[cite: 39].
     public void EmpezarTerremoto(float duracion, float fuerza)
     {
         _posicionOriginal = transform.localPosition;

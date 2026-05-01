@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class CambioMusica : MonoBehaviour
 {
-    [Header("Música de esta zona")]
-    [Tooltip("Arrastra aquí la canción que debe sonar en este bioma")]
+    [Header("Configuración de Audio Local")]
+    // Clip de audio específico que se activará al entrar en el volumen de colisión.
     [SerializeField] private AudioClip musicaBioma;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si el que entra en la zona invisible es el jugador...
+        // Verifica si el objeto que entra en el disparador tiene la etiqueta Player.
         if (collision.CompareTag("Player"))
         {
-            // Le pedimos al mánager que cambie el disco
+            // Solicita al AudioManager el cambio de pista musical si las referencias son válidas.
             if (AudioManager.Instancia != null && musicaBioma != null)
             {
                 AudioManager.Instancia.ReproducirMusica(musicaBioma);

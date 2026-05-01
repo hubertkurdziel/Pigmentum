@@ -13,6 +13,7 @@ public class ProyectilBoss : MonoBehaviour
 
     private void Start()
     {
+        // Establece el tiempo de vida para la autodestrucción y aplica velocidad inicial.
         Destroy(gameObject, tiempoDeVida);
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -24,13 +25,12 @@ public class ProyectilBoss : MonoBehaviour
 
     private void Explotar()
     {
-        // Reproducir sonido si lo hay
+        // Gestiona la reproducción de efectos sonoros, visuales y la eliminación del objeto.
         if (AudioManager.Instancia != null && sfxExplosion != null)
         {
             AudioManager.Instancia.ReproducirSFX(sfxExplosion);
         }
 
-        // Instanciar las partículas si hemos asignado el prefab
         if (prefabExplosion != null)
         {
             Instantiate(prefabExplosion, transform.position, Quaternion.identity);
@@ -41,10 +41,9 @@ public class ProyectilBoss : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignoramos si choca con otro enemigo (para que el boss no se dispare a sí mismo)
+        // Procesa la interacción con el jugador para aplicar daño y filtra colisiones con superficies sólidas.
         if (collision.CompareTag("Enemigo")) return;
 
-        // Si golpea al jugador
         if (collision.CompareTag("Player"))
         {
             PlayerController player = collision.GetComponent<PlayerController>();
@@ -54,9 +53,6 @@ public class ProyectilBoss : MonoBehaviour
             }
         }
 
-        // --- CAMBIO CLAVE ---
-        // Explotar si choca con el jugador, con el layer "floorLayer", o con CUALQUIER objeto sólido (!isTrigger)
-        // (Esto incluye tus objetos en el layer "Wall" porque seguramente tengan un Collider2D normal, no trigger)
         if (collision.CompareTag("Player") || collision.gameObject.layer == LayerMask.NameToLayer("floorLayer") || !collision.isTrigger)
         {
             Explotar();

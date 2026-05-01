@@ -8,7 +8,6 @@ public class NPC_Dialogo : MonoBehaviour
         public string textoDelBoton; 
         [TextArea(2, 4)] public string[] frasesRespuesta; 
         public bool esOpcionDeSalida; 
-        
         public bool ocultarTrasLeer; 
     }
 
@@ -20,20 +19,18 @@ public class NPC_Dialogo : MonoBehaviour
     public OpcionDialogo[] opciones;
 
     [Header("Audio del NPC")]
-    [Tooltip("El sonido (como un balbuceo corto o tecleo) que sonará mientras habla")]
-    public AudioClip sonidoHablar; // <-- NUEVO: Para ponerle voz al NPC
+    public AudioClip sonidoHablar; 
     
     [HideInInspector] public bool[] opcionesLeidas; 
 
     private bool yaHablo = false;
     private Animator _animator; 
     private SpriteRenderer _spriteRenderer; 
-    
-    // <-- NUEVO: El componente que reproducirá el sonido
     private AudioSource _audioSource; 
 
     private void Awake()
     {
+        // Inicializa el registro de opciones y configura el componente de audio.
         if (opciones != null)
         {
             opcionesLeidas = new bool[opciones.Length];
@@ -42,10 +39,9 @@ public class NPC_Dialogo : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        // --- NUEVO: Creamos el "altavoz" y lo configuramos automáticamente ---
         _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.clip = sonidoHablar;
-        _audioSource.loop = true; // Fundamental para que suene de continuo mientras salen letras
+        _audioSource.loop = true; 
         _audioSource.playOnAwake = false;
     }
 
@@ -59,17 +55,15 @@ public class NPC_Dialogo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        // Activa la interfaz de diálogo a través del manager si se cumplen las condiciones de proximidad.
         if (col.CompareTag("Player") && !yaHablo)
         {
-            if (DialogueManager.Instancia == null)
+            if (DialogueManager.Instancia != null)
             {
-                Debug.LogError("ERROR: DialogueManager no encontrado en la escena.");
-                return;
-            }
-
-            if (!DialogueManager.Instancia.DialogoActivo())
-            {
-                DialogueManager.Instancia.IniciarDialogoConOpciones(this);
+                if (!DialogueManager.Instancia.DialogoActivo())
+                {
+                    DialogueManager.Instancia.IniciarDialogoConOpciones(this);
+                }
             }
         }
     }
@@ -84,6 +78,7 @@ public class NPC_Dialogo : MonoBehaviour
 
     public void DespedirYDesactivar()
     {
+        // Inhabilita la interacción futura y la colisión física del objeto.
         yaHablo = true; 
         
         BoxCollider2D cuerpoFisico = GetComponent<BoxCollider2D>();
@@ -95,27 +90,20 @@ public class NPC_Dialogo : MonoBehaviour
 
     public void SetHablando(bool hablando)
     {
-        // 1. Manejamos la animación (como ya tenías)
+        // Gestiona los estados de animación y la reproducción de la pista de audio.
         if (_animator != null)
         {
             _animator.SetBool("isTalking", hablando);
         }
-        else
-        {
-            Debug.LogWarning("⚠️ El script del NPC no encuentra ningún Animator.");
-        }
 
-        // --- NUEVO: 2. Manejamos el sonido ---
         if (_audioSource != null && sonidoHablar != null)
         {
             if (hablando)
             {
-                // Si el Manager dice que hable, le damos al Play (solo si no estaba sonando ya)
                 if (!_audioSource.isPlaying) _audioSource.Play();
             }
             else
             {
-                // Si el Manager dice que pare, cortamos el sonido en seco
                 if (_audioSource.isPlaying) _audioSource.Stop();
             }
         }

@@ -5,7 +5,7 @@ using System.Collections;
 public class SalaSecreta : MonoBehaviour
 {
     private Tilemap _tilemap;
-    public float velocidadDesvanecimiento = 4f; // Cuanto mayor sea, más rápido desaparece
+    public float velocidadDesvanecimiento = 4f;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class SalaSecreta : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             StopAllCoroutines();
-            StartCoroutine(CambiarOpacidad(0f)); // 0 = Transparente
+            StartCoroutine(CambiarOpacidad(0f));
         }
     }
 
@@ -26,10 +26,11 @@ public class SalaSecreta : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             StopAllCoroutines();
-            StartCoroutine(CambiarOpacidad(1f)); // 1 = Negro opaco
+            StartCoroutine(CambiarOpacidad(1f));
         }
     }
 
+    // Realiza una transición gradual del canal alfa del Tilemap para ocultar o revelar áreas del nivel[cite: 26].
     private IEnumerator CambiarOpacidad(float opacidadObjetivo)
     {
         Color colorActual = _tilemap.color;

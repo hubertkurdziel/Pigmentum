@@ -11,15 +11,16 @@ public class MenuPausa : MonoBehaviour
     public GameObject panelOpciones;     
     public GameObject fondoOscuro;
     
-    [Header("Navegación Mando/Teclado")]
+    [Header("Navegación")]
     public GameObject primerBotonPausa; 
-    public GameObject primerBotonOpciones; // <-- NUEVO: Arrastra aquí el primer botón de Ajustes
+    public GameObject primerBotonOpciones; 
 
     private bool juegoPausado = false;
     private bool viendoOpciones = false; 
 
     private void Start()
     {
+        // Inicializa el estado de la interfaz y asegura que el tiempo del motor sea normal[cite: 35].
         if (panelBotonesPausa != null) panelBotonesPausa.SetActive(false);
         if (panelOpciones != null) panelOpciones.SetActive(false);
         if (fondoOscuro != null) fondoOscuro.SetActive(false); 
@@ -28,6 +29,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
+        // Detecta la entrada de teclado o mando para alternar el estado de pausa[cite: 35].
         bool pausaPulsada = false;
 
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
@@ -51,6 +53,7 @@ public class MenuPausa : MonoBehaviour
         }
     }
 
+    // Detiene el tiempo del motor y habilita los componentes visuales del menú[cite: 35].
     public void Pausar()
     {
         panelBotonesPausa.SetActive(true);
@@ -66,6 +69,7 @@ public class MenuPausa : MonoBehaviour
         }
     }
 
+    // Restablece la velocidad del tiempo y oculta la interfaz de usuario[cite: 35].
     public void Reanudar()
     {
         panelBotonesPausa.SetActive(false);
@@ -80,14 +84,13 @@ public class MenuPausa : MonoBehaviour
         }
     }
 
-    // --- ACTUALIZADO: El botón de opciones ahora también da el foco ---
+    // Alterna la visibilidad entre el panel de pausa principal y el panel de configuración[cite: 35].
     public void AbrirOpciones()
     {
         panelBotonesPausa.SetActive(false); 
         panelOpciones.SetActive(true);      
         viendoOpciones = true;
 
-        // <-- NUEVO: Le damos el foco al primer botón del panel de opciones
         if (primerBotonOpciones != null)
         {
             StartCoroutine(SeleccionarBotonConRetraso(primerBotonOpciones));
@@ -112,10 +115,11 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene("MenuPrincipal"); 
     }
 
+    // Garantiza que la selección del sistema de eventos se realice después de la activación del panel[cite: 35].
     private IEnumerator SeleccionarBotonConRetraso(GameObject boton)
     {
         EventSystem.current.SetSelectedGameObject(null);
-        yield return null; // Espera un frame para que el panel se active del todo
+        yield return null; 
         EventSystem.current.SetSelectedGameObject(boton);
     }
 }

@@ -9,9 +9,9 @@ public class MenuOpciones : MonoBehaviour
 {
     [Header("Conexión Principal")]
     [SerializeField] private MainMenuManager menuPrincipal;
-    [SerializeField] private MenuPausa menuPausa; // <-- AÑADE ESTA LÍNEA
+    [SerializeField] private MenuPausa menuPausa; 
     [Header("Navegación Mando/Teclado")]
-    [SerializeField] private GameObject primerBotonOpciones; // Arrastraremos la pestaña de gráficos o el Btn_Back
+    [SerializeField] private GameObject primerBotonOpciones; 
 
     [Header("Paneles de Pestañas")]
     [SerializeField] private GameObject panelGraficos;
@@ -21,56 +21,46 @@ public class MenuOpciones : MonoBehaviour
     [Header("Controles de Gráficos (Imágenes)")]
     [SerializeField] private Image imagenResolucion; 
     [SerializeField] private Sprite[] spritesResolucion; 
-    
     [SerializeField] private Image imagenModoPantalla; 
     [SerializeField] private Sprite[] spritesModoPantalla; 
-    
     [SerializeField] private Image imagenFps;          
     [SerializeField] private Sprite[] spritesFps; 
-
     [SerializeField] private Toggle mostrarFpsToggle;
-
     [SerializeField] private Image imagenBrillo; 
     [SerializeField] private Sprite[] spritesBrillo; 
     [SerializeField] private Image capaOscuraBrillo;
 
     [Header("Controles de Audio (Imágenes)")]
     [SerializeField] private AudioMixer audioMixer;
-    
     [SerializeField] private Image imagenVolMaster;
     [SerializeField] private Image imagenVolMusica;
     [SerializeField] private Image imagenVolEfectos;
-    
-    [Tooltip("Pon aquí los 11 sprites del volumen (0% al 100%)")]
     [SerializeField] private Sprite[] spritesVolumen; 
+
     [Header("Configuración Especial Toggle")]
-    [SerializeField] private Sprite spriteToggleActivado;    // El sprite que ya tiene el Tick
-    [SerializeField] private Sprite spriteToggleDesactivado; // El sprite del cuadrado vacío
+    [SerializeField] private Sprite spriteToggleActivado;    
+    [SerializeField] private Sprite spriteToggleDesactivado; 
     [SerializeField] private Image imagenFondoToggle;
 
     [Header("Fondo de Vídeo")]
     [SerializeField] private VideoPlayer fondoVideo;
-    // ─── VARIABLES INTERNAS GRÁFICOS ───
+
     private int resolucionIndex = 1;
     private int modoPantallaIndex = 0;
     private int fpsIndex = 1; 
     private int brilloIndex;
-
     private int[] valoresFps = { 30, 60, 120, 144, -1 };
-
-    // ─── VARIABLES INTERNAS AUDIO (0 al 10) ───
     private int volMasterIndex = 10;
     private int volMusicaIndex = 10;
     private int volEfectosIndex = 10;
-
     private bool cargandoDatos = false;
 
     private void Start()
     {   
+        // Inicializa el estado de las configuraciones cargando valores persistentes[cite: 34].
         MostrarPanelGraficos(); 
         CargarDatosGuardados();
 
-        // Aplicamos el volumen inmediatamente al arrancar
         AplicarVolumenAlMixer("VolumenMaster", volMasterIndex);
         AplicarVolumenAlMixer("VolumenMusica", volMusicaIndex);
         AplicarVolumenAlMixer("VolumenEfectos", volEfectosIndex);
@@ -82,23 +72,23 @@ public class MenuOpciones : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
+
     private void OnEnable()
     {
-        // 1. Mostrar siempre el panel de Gráficos al abrir
         MostrarPanelGraficos();
 
-        // 2. Seleccionar el primer botón para mando/teclado
         EventSystem.current.SetSelectedGameObject(null);
         if (primerBotonOpciones != null)
         {
             EventSystem.current.SetSelectedGameObject(primerBotonOpciones);
         }
     }
+
     private void CargarDatosGuardados()
     {
+        // Recupera los índices de configuración almacenados y actualiza los elementos visuales[cite: 34].
         cargandoDatos = true;
 
-        // --- Cargar Gráficos ---
         resolucionIndex = PlayerPrefs.GetInt("Resolucion", 1); 
         ActualizarImagenResolucion(); 
 
@@ -109,14 +99,12 @@ public class MenuOpciones : MonoBehaviour
         ActualizarImagenFps();
 
         if(mostrarFpsToggle != null) 
-        mostrarFpsToggle.isOn = PlayerPrefs.GetInt("MostrarFPS", 0) == 1;
+            mostrarFpsToggle.isOn = PlayerPrefs.GetInt("MostrarFPS", 0) == 1;
         
-        // --- Cargar Brillo ---
         brilloIndex = PlayerPrefs.GetInt("BrilloIndex", spritesBrillo.Length - 1); 
         ActualizarImagenBrillo(); 
         AplicarBrilloVisual();
 
-        // --- Cargar Audio ---
         volMasterIndex = PlayerPrefs.GetInt("VolMaster", 10);
         volMusicaIndex = PlayerPrefs.GetInt("VolMusica", 10);
         volEfectosIndex = PlayerPrefs.GetInt("VolEfectos", 10);
@@ -132,7 +120,6 @@ public class MenuOpciones : MonoBehaviour
         cargandoDatos = false;
     }
 
-    // ─── FLECHAS GRÁFICOS ───
     public void SiguienteResolucion() { resolucionIndex++; if (resolucionIndex >= spritesResolucion.Length) resolucionIndex = 0; ActualizarImagenResolucion(); }
     public void AnteriorResolucion() { resolucionIndex--; if (resolucionIndex < 0) resolucionIndex = spritesResolucion.Length - 1; ActualizarImagenResolucion(); }
     private void ActualizarImagenResolucion() { if(imagenResolucion != null && spritesResolucion.Length > 0) { resolucionIndex = Mathf.Clamp(resolucionIndex, 0, spritesResolucion.Length - 1); imagenResolucion.sprite = spritesResolucion[resolucionIndex]; } }
@@ -154,13 +141,12 @@ public class MenuOpciones : MonoBehaviour
     { 
         if (cargandoDatos) return; 
 
-        // SOLO cambiamos visualmente el sprite del fondo (no guardamos nada aún)
         if (imagenFondoToggle != null)
         {
             imagenFondoToggle.sprite = activo ? spriteToggleActivado : spriteToggleDesactivado;
         }
     }
-    // ─── FLECHAS AUDIO ───
+
     public void SiguienteVolMaster() { if (volMasterIndex < 10) { volMasterIndex++; AlCambiarAudio("VolumenMaster"); } }
     public void AnteriorVolMaster()  { if (volMasterIndex > 0)  { volMasterIndex--; AlCambiarAudio("VolumenMaster"); } }
 
@@ -172,7 +158,6 @@ public class MenuOpciones : MonoBehaviour
 
     private void AlCambiarAudio(string parametro) 
     { 
-        // 🎨 Ahora esto SOLO actualiza los dibujitos de las barras de volumen
         ActualizarImagenesAudio(); 
     }
 
@@ -186,6 +171,7 @@ public class MenuOpciones : MonoBehaviour
         }
     }
 
+    // Convierte el valor de volumen linear a escala logarítmica de decibelios para el mezclador de audio[cite: 34].
     private void AplicarVolumenAlMixer(string parametro, int index) 
     { 
         if (audioMixer == null) return; 
@@ -194,61 +180,49 @@ public class MenuOpciones : MonoBehaviour
         audioMixer.SetFloat(parametro, decibelios); 
     }
 
-    // ─── SISTEMA DE GUARDADO ───
+    // Ejecuta y almacena permanentemente todos los ajustes de hardware y software seleccionados[cite: 34].
     public void AplicarYGuardarCambios()
     {
-        // 1. Pausamos el video antes de cambiar la resolución para evitar que la textura "explote"
         if (fondoVideo != null) fondoVideo.Pause();
 
         int ancho = 1920;
         int alto = 1080;
 
-        // Lógica de selección de resolución según el índice[cite: 6]
         if (resolucionIndex == 0) { ancho = 1280; alto = 720; }
         else if (resolucionIndex == 1) { ancho = 1920; alto = 1080; }
         else if (resolucionIndex == 2) { ancho = 2560; alto = 1440; }
 
-        // Configuración del modo de pantalla[cite: 6]
         FullScreenMode modo = FullScreenMode.ExclusiveFullScreen;
         if (modoPantallaIndex == 1) modo = FullScreenMode.Windowed;
         else if (modoPantallaIndex == 2) modo = FullScreenMode.FullScreenWindow;
         
-        // 2. Aplicamos el cambio de resolución real[cite: 6]
         Screen.SetResolution(ancho, alto, modo);
 
-        // 3. Reanudamos el video inmediatamente; al hacerlo tras el cambio, se adaptará al nuevo tamaño
         if (fondoVideo != null) fondoVideo.Play();
         
-        // Aplicamos el límite de FPS[cite: 6]
         Application.targetFrameRate = valoresFps[Mathf.Clamp(fpsIndex, 0, valoresFps.Length - 1)];
 
-        // Actualizamos el volumen real en el AudioMixer[cite: 6]
         AplicarVolumenAlMixer("VolumenMaster", volMasterIndex);
         AplicarVolumenAlMixer("VolumenMusica", volMusicaIndex);
         AplicarVolumenAlMixer("VolumenEfectos", volEfectosIndex);
 
-        // Aplicamos el ajuste visual de brillo[cite: 6]
         AplicarBrilloVisual();
 
-        // 4. Guardamos la preferencia de visualización de FPS[cite: 6]
         if (mostrarFpsToggle != null) 
         {
             PlayerPrefs.SetInt("MostrarFPS", mostrarFpsToggle.isOn ? 1 : 0);
         }
 
-        // 5. Avisamos al contador para que se active o desactive[cite: 6]
         ContadorFPS contador = FindObjectOfType<ContadorFPS>();
         if (contador != null) 
         { 
             contador.ActualizarEstado(); 
         }
 
-        // 6. Guardamos todos los índices en PlayerPrefs para la próxima sesión[cite: 6]
         PlayerPrefs.SetInt("Resolucion", resolucionIndex);
         PlayerPrefs.SetInt("ModoPantalla", modoPantallaIndex);
         PlayerPrefs.SetInt("LimiteFPS", fpsIndex);
         PlayerPrefs.SetInt("BrilloIndex", brilloIndex);
-        
         PlayerPrefs.SetInt("VolMaster", volMasterIndex);
         PlayerPrefs.SetInt("VolMusica", volMusicaIndex);
         PlayerPrefs.SetInt("VolEfectos", volEfectosIndex);
@@ -256,19 +230,14 @@ public class MenuOpciones : MonoBehaviour
         PlayerPrefs.Save(); 
     }
 
-    // ─── SALIDA ───
     public void SalirDeOpciones() 
     { 
         CargarDatosGuardados(); 
         
-        // Si estamos en el menú principal, vuelve allí
         if (menuPrincipal != null) menuPrincipal.ShowMainMenu(); 
-        
-        // Si estamos en el juego, vuelve a la pausa
         if (menuPausa != null) menuPausa.VolverDeOpciones(); 
     }
 
-    // ─── NAVEGACIÓN PESTAÑAS ───
     public void MostrarPanelGraficos() { if(panelGraficos != null) panelGraficos.SetActive(true); if(panelAudio != null) panelAudio.SetActive(false); if(panelControles != null) panelControles.SetActive(false); }
     public void MostrarPanelAudio() { if(panelGraficos != null) panelGraficos.SetActive(false); if(panelAudio != null) panelAudio.SetActive(true); if(panelControles != null) panelControles.SetActive(false); }
     public void MostrarPanelControles() { if(panelGraficos != null) panelGraficos.SetActive(false); if(panelAudio != null) panelAudio.SetActive(false); if(panelControles != null) panelControles.SetActive(true); }

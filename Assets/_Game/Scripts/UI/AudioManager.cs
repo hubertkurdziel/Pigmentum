@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Singleton para llamarlo desde cualquier script (AudioManager.Instancia...)
+    // Instancia estática para el acceso global al sistema de audio mediante el patrón Singleton.
     public static AudioManager Instancia;
 
-    [Header("Altavoces (Audio Sources)")]
-    [Tooltip("El altavoz para los efectos cortos (saltos, golpes, dash)")]
+    [Header("Configuración de Fuentes de Audio")]
+    // Referencia al componente AudioSource destinado a la reproducción de efectos de sonido.
     [SerializeField] private AudioSource sfxSource;
     
-    [Tooltip("El altavoz para la música de fondo (en bucle)")]
+    // Referencia al componente AudioSource destinado a la reproducción de música de fondo.
     [SerializeField] private AudioSource musicaSource;
 
     private void Awake()
     {
-        // Configuración para que sobreviva al cambiar de nivel
+        // Implementación del patrón Singleton y persistencia entre escenas.
         if (Instancia == null)
         {
             Instancia = this;
@@ -26,32 +26,26 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ── MÉTODOS PÚBLICOS PARA QUE LOS USEN OTROS SCRIPTS ──
-
-    /// <summary>
-    /// Reproduce un sonido corto que se puede superponer con otros (Efectos)
-    /// </summary>
+    // Ejecuta un clip de audio de forma no interrumpida, permitiendo la superposición.
     public void ReproducirSFX(AudioClip clip)
     {
         if (clip != null && sfxSource != null)
         {
-            Debug.Log("🔊 AudioManager: Reproduciendo con éxito -> " + clip.name);
+            Debug.Log("AudioManager: Reproduciendo clip -> " + clip.name);
             sfxSource.PlayOneShot(clip); 
         }
         else if (sfxSource == null)
         {
-            Debug.LogError("❌ AudioManager: ¡No tengo altavoz asignado en el Inspector!");
+            Debug.LogError("AudioManager: El componente sfxSource no está asignado.");
         }
     }
 
-    /// <summary>
-    /// Cambia la música de fondo
-    /// </summary>
+    // Actualiza el clip de música actual y activa la reproducción en bucle.
     public void ReproducirMusica(AudioClip nuevaMusica)
     {
         if (nuevaMusica != null && musicaSource != null)
         {
-            // ¡NUEVO!: Solo la cambiamos si es diferente a la que ya está sonando
+            // Evita reiniciar la pista si el clip solicitado ya se encuentra en reproducción.
             if (musicaSource.clip == nuevaMusica) return; 
 
             musicaSource.clip = nuevaMusica;
@@ -60,6 +54,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // Detiene cualquier sonido que se esté reproduciendo en la fuente de efectos.
     public void DetenerSFX()
     {
         if (sfxSource != null)

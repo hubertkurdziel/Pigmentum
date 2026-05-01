@@ -11,17 +11,15 @@ public class ContadorFPS : MonoBehaviour
 
     private void Awake()
     {
-        // 1. Buscamos si ya existe otro contador igual
+        // Gestiona la persistencia del objeto entre escenas y elimina duplicados[cite: 30].
         ContadorFPS[] otrosContadores = FindObjectsOfType<ContadorFPS>();
 
         if (otrosContadores.Length > 1)
         {
-            // Si venimos de otra escena y ya había uno, destruimos la copia nueva
             Destroy(gameObject);
             return;
         }
 
-        // 2. Le decimos a Unity que NO destruya el Canvas de los FPS al cambiar de escena
         DontDestroyOnLoad(gameObject);
     }
 
@@ -32,6 +30,7 @@ public class ContadorFPS : MonoBehaviour
 
     private void Update()
     {
+        // Calcula el promedio de cuadros por segundo basándose en el tiempo transcurrido independiente de la escala[cite: 30].
         if (!mostrarFPS || textoFPS == null) return;
 
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
@@ -42,7 +41,7 @@ public class ContadorFPS : MonoBehaviour
 
     public void ActualizarEstado()
     {
-        // Leemos la memoria del juego para saber si el usuario marcó el Toggle
+        // Sincroniza la visibilidad del componente con las preferencias guardadas en el sistema[cite: 30].
         mostrarFPS = PlayerPrefs.GetInt("MostrarFPS", 0) == 1;
 
         if (textoFPS != null)

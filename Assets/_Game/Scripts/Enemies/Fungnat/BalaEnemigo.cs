@@ -7,12 +7,11 @@ public class BalaEnemigo : MonoBehaviour
     [SerializeField] private float tiempoDeVida = 3f;
     
     [Header("Ajuste Visual")]
-    [Tooltip("Prueba con 90, 180, 270 o -90 hasta que apunte perfecto")]
     [SerializeField] private float compensacionRotacion = 135f; 
 
     [Header("Efectos")]
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private AudioClip sfxExplosion; // <-- NUEVO: Sonido de explosión
+    [SerializeField] private AudioClip sfxExplosion;
 
     private void Awake()
     {
@@ -20,6 +19,7 @@ public class BalaEnemigo : MonoBehaviour
         Destroy(gameObject, tiempoDeVida); 
     }
 
+    // Establece el vector de movimiento y orienta el objeto aplicando el desfase de rotación configurado[cite: 12].
     public void SetDireccion(Vector2 direccion)
     {
         if (_rb != null)
@@ -31,9 +31,9 @@ public class BalaEnemigo : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, anguloBase + compensacionRotacion);
     }
 
+    // Procesa el impacto con el usuario para aplicar daño y activa la destrucción del objeto al tocar superficies[cite: 12].
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignoramos si choca con otro enemigo
         if (collision.CompareTag("Enemigo")) return;
 
         if (collision.CompareTag("Player"))
@@ -45,7 +45,6 @@ public class BalaEnemigo : MonoBehaviour
             }
         }
 
-        // Si choca con el suelo o el jugador, explota
         if (collision.CompareTag("Player") || collision.gameObject.layer == LayerMask.NameToLayer("floorLayer") || !collision.isTrigger)
         {
             if (explosionPrefab != null)
@@ -53,7 +52,6 @@ public class BalaEnemigo : MonoBehaviour
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             }
 
-            // --- NUEVO: Reproducimos el sonido de explosión ---
             if (AudioManager.Instancia != null && sfxExplosion != null)
             {
                 AudioManager.Instancia.ReproducirSFX(sfxExplosion);
